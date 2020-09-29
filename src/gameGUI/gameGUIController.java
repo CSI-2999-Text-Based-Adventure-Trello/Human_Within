@@ -7,12 +7,15 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import main.switchBetweenScenes;
 
 public class gameGUIController implements Initializable {
     
     switchBetweenScenes sBS = new switchBetweenScenes();
+    @FXML
+    private Button btnEnd;
     
     @FXML
     private void tempButtonAction(ActionEvent event) throws IOException {
@@ -24,4 +27,13 @@ public class gameGUIController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }
-}
+
+    @FXML
+    private void handleEndButton(ActionEvent event) {
+             Stage thisStage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        sBS.switchScence("/endScreen/endScreen.fxml", thisStage);
+    }
+    }
+
+
+
