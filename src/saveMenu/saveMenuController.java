@@ -11,23 +11,22 @@ import javafx.scene.Node;
 import javafx.scene.control.ListView;
 import javafx.scene.control.SelectionMode;
 import javafx.stage.Stage;
+import startMenu.startMenuController;
 
 public class saveMenuController implements Initializable {
 
-    //save game
-    public String saveGame = null;
     //Use for the ListView
     ObservableList list = FXCollections.observableArrayList();
     @FXML
     private ListView<String> listView;
+    startMenuController sTMC = new startMenuController(); 
 
     //This will load the selected save game
     @FXML
     private void loadGameButtonAction(ActionEvent event) {
         //This get the save game the user selected then close the saveMenu.fxml
         Stage thisStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        saveGame = listView.getSelectionModel().getSelectedItem();
-        System.out.println(saveGame);
+        sTMC.saveGameFile(listView.getSelectionModel().getSelectedItem());
         thisStage.close();
     }
 
