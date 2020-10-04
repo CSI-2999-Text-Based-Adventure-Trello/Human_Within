@@ -34,8 +34,4 @@ public class loadSavedGameFiles {
             System.out.println(files);
         }
     }
-
-    public void saveGameFile(String savedGame) {
-        csi.savedGame = savedGame;
-    }
 }
