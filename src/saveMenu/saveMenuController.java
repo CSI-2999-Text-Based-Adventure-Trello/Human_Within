@@ -1,5 +1,6 @@
 package saveMenu;
 
+import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
@@ -9,8 +10,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.ListView;
-import javafx.scene.control.SelectionMode;
 import javafx.stage.Stage;
+import main.loadSavedGameFiles;
 import startMenu.startMenuController;
 
 public class saveMenuController implements Initializable {
@@ -18,15 +19,16 @@ public class saveMenuController implements Initializable {
     //Use for the ListView
     ObservableList list = FXCollections.observableArrayList();
     @FXML
-    private ListView<String> listView;
-    startMenuController sTMC = new startMenuController(); 
+    private ListView<File> listView;
+    startMenuController sTMC = new startMenuController();
+    loadSavedGameFiles load = new loadSavedGameFiles();
 
     //This will load the selected save game
     @FXML
     private void loadGameButtonAction(ActionEvent event) {
         //This get the save game the user selected then close the saveMenu.fxml
         Stage thisStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        sTMC.saveGameFile(listView.getSelectionModel().getSelectedItem());
+        sTMC.saveGameFile(listView.getSelectionModel().getSelectedItem().toString());
         thisStage.close();
     }
 
@@ -37,26 +39,8 @@ public class saveMenuController implements Initializable {
         thisStage.close();
     }
 
-    private void loadDate() {
-        //This clear all the data in the List
-        list.clear();
-        String a = "Iron Man";
-        String b = "Titanic";
-        String c = "Contact";
-        String d = "Surrogates";
-        list.addAll(a, b, c, d);
-        /*or This will add one by one
-        list.add(a);
-        list.add(b);
-        list.add(c);
-        list.add(d);
-         */
-        listView.getItems().addAll(list);
-        listView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
-    }
-
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        loadDate();
+        load.load(listView);
     }
 }
