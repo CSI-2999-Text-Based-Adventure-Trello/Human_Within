@@ -7,9 +7,10 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class CSI2999Project extends Application {
-    
+
     final protected String gameNames = "Human Within";
-    
+    public String savedGame;
+
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("/startMenu/startMenu.fxml"));
