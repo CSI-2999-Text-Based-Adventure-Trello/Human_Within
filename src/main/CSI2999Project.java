@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 public class CSI2999Project extends Application {
 
     final protected String gameNames = "Human Within";
-    public String savedGame;
+    public static String savedGame;
 
     @Override
     public void start(Stage stage) throws Exception {

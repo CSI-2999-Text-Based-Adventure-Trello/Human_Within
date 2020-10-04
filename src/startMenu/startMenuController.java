@@ -9,16 +9,19 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.stage.Stage;
 import main.CSI2999Project;
+import main.loadSavedGameFiles;
 import main.switchBetweenScenes;
 
 public class startMenuController implements Initializable {
 
     CSI2999Project csi = new CSI2999Project();
     switchBetweenScenes sBS = new switchBetweenScenes();
+    loadSavedGameFiles load = new loadSavedGameFiles();
 
     @FXML
     private void startButtonAction(ActionEvent event) throws IOException {
         sBS.newScence("/saveMenu/saveMenu.fxml");
+        load.loadSaveGame(csi.savedGame);
     }
 
     @FXML
@@ -29,7 +32,6 @@ public class startMenuController implements Initializable {
 
     public void saveGameFile(String savedGame) {
         csi.savedGame = savedGame;
-        System.out.println(csi.savedGame);
     }
 
     @Override
