@@ -14,14 +14,13 @@ import main.switchBetweenScenes;
 
 public class startMenuController implements Initializable {
 
-    CSI2999Project csi = new CSI2999Project();
     switchBetweenScenes sBS = new switchBetweenScenes();
     loadSavedGameFiles load = new loadSavedGameFiles();
 
     @FXML
     private void startButtonAction(ActionEvent event) throws IOException {
         sBS.newScence("/saveMenu/saveMenu.fxml");
-        load.loadSaveGame(csi.savedGame);
+        load.loadSaveGame(CSI2999Project.savedGame);
     }
 
     @FXML
@@ -31,7 +30,7 @@ public class startMenuController implements Initializable {
     }
 
     public void saveGameFile(String savedGame) {
-        csi.savedGame = savedGame;
+        CSI2999Project.savedGame = savedGame;
     }
 
     @Override
