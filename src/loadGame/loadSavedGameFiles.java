@@ -1,10 +1,11 @@
-package main;
+package loadGame;
 
 import java.io.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.ListView;
 import javafx.scene.control.SelectionMode;
+import main.CSI2999Project;
 
 //This class load the save Folder from a folder.
 public class loadSavedGameFiles {
@@ -27,11 +28,20 @@ public class loadSavedGameFiles {
         }
     }
 
-    public void loadSaveGame(String fileName) {
+    public void loadSaveGame(String fileName) throws FileNotFoundException, IOException {
         File file = new File(fileName);
         File[] fileArray = file.listFiles();
         for (File files : fileArray) {
-            System.out.println(files);
+            if (files.toString().contains("saveGame.txt")) {
+                BufferedReader reader = new BufferedReader(new FileReader(files.toString()));
+                String decisions;
+                while ((decisions = reader.readLine()) != null) {
+                    CSI2999Project.decisions.add(decisions);
+                }
+            }
+            for (String i : CSI2999Project.decisions) {
+                System.out.println(i);
+            }
         }
     }
 }
