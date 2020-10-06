@@ -9,7 +9,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.stage.Stage;
 import main.CSI2999Project;
-import main.loadSavedGameFiles;
+import loadGame.loadSavedGameFiles;
 import main.switchBetweenScenes;
 
 public class startMenuController implements Initializable {
@@ -27,10 +27,6 @@ public class startMenuController implements Initializable {
     private void tempButtonAction(ActionEvent event) throws IOException {
         Stage thisStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         sBS.switchScence("/gameGUI/gameGUI.fxml", thisStage);
-    }
-
-    public void saveGameFile(String savedGame) {
-        CSI2999Project.savedGame = savedGame;
     }
 
     @Override

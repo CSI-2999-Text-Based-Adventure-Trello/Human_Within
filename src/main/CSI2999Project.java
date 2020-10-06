@@ -1,5 +1,6 @@
 package main;
 
+import java.util.ArrayList;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -10,6 +11,7 @@ public class CSI2999Project extends Application {
 
     final protected String gameNames = "Human Within";
     public static String savedGame;
+    public static ArrayList<String> decisions = new ArrayList<String>();
 
     @Override
     public void start(Stage stage) throws Exception {

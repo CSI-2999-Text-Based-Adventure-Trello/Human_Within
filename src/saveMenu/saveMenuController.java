@@ -11,7 +11,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.ListView;
 import javafx.stage.Stage;
-import main.loadSavedGameFiles;
+import main.CSI2999Project;
+import loadGame.loadSavedGameFiles;
 import startMenu.startMenuController;
 
 public class saveMenuController implements Initializable {
@@ -28,7 +29,7 @@ public class saveMenuController implements Initializable {
     private void loadGameButtonAction(ActionEvent event) {
         //This get the save game the user selected then close the saveMenu.fxml
         Stage thisStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        sTMC.saveGameFile(listView.getSelectionModel().getSelectedItem().toString());
+        CSI2999Project.savedGame = (listView.getSelectionModel().getSelectedItem().toString());
         thisStage.close();
     }
 
