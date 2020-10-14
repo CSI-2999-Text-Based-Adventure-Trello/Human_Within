@@ -22,7 +22,7 @@ import main.switchBetweenScenes;
  *
  * @author David Djeljaj
  */
-public class FXMLController implements Initializable {
+public class endScreenController implements Initializable {
     switchBetweenScenes sBS = new switchBetweenScenes();
 
     @FXML
@@ -37,13 +37,20 @@ public class FXMLController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
-
-    @FXML
+@FXML
     private void handleStartOver(ActionEvent event) throws IOException {
          Stage thisStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         sBS.switchScence("/startMenu/startMenu.fxml", thisStage);
         
         
     }
+
+    @FXML
+    private void handleStartOver1(ActionEvent event) throws IOException {
+        Stage thisStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        sBS.switchScence("/startMenu/startMenu.fxml", thisStage);
+    }
+    
+        
     
 }
