@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="infoScreen.InfoScreenController">
+   <children>
+      <Label layoutX="185.0" prefHeight="66.0" prefWidth="230.0" text="How To Play">
+         <font>
+            <Font size="41.0" />
+         </font>
+      </Label>
+      <TextArea layoutX="11.0" layoutY="68.0" prefHeight="183.0" prefWidth="578.0">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></TextArea>
+      <Button fx:id="infobtn" layoutX="248.0" layoutY="277.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="37.0" prefWidth="105.0" text="Back" />
+      <Label contentDisplay="CENTER" layoutX="30.0" layoutY="72.0" prefHeight="30.0" prefWidth="537.0" text="Each path that you choose will have different outcomes as the game is being played.">
+         <font>
+            <Font name="System Bold" size="13.5" />
+         </font>
+      </Label>
+      <Circle fill="#000b14" layoutX="20.0" layoutY="87.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#000b14" layoutX="20.0" layoutY="117.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label alignment="TOP_LEFT" layoutX="30.0" layoutY="107.0" prefHeight="18.0" prefWidth="567.0" text="HP is crucial in the game so you have to make sure that your HP is higher than there enemies. ">
+         <font>
+            <Font name="System Bold" size="12.5" />
+         </font>
+      </Label>
+      <Separator layoutX="13.0" layoutY="93.0" prefHeight="19.0" prefWidth="567.0" />
+      <Separator layoutX="10.0" layoutY="127.0" prefHeight="19.0" prefWidth="578.0" />
+      <Circle fill="#000307" layoutX="20.0" layoutY="146.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label layoutX="30.0" layoutY="131.0" prefHeight="30.0" prefWidth="557.0" text="There will at least 4 choices to choose from.">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Separator layoutX="11.0" layoutY="157.0" prefHeight="19.0" prefWidth="578.0" />
+      <Circle fill="#00070d" layoutX="20.0" layoutY="179.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label layoutX="30.0" layoutY="169.0" prefHeight="17.0" prefWidth="557.0" text="The collect items that you collect will help you throughout the story.">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
