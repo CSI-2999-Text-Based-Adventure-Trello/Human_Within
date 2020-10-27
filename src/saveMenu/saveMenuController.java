@@ -29,8 +29,12 @@ public class saveMenuController implements Initializable {
     private void loadGameButtonAction(ActionEvent event) {
         //This get the save game the user selected then close the saveMenu.fxml
         Stage thisStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        CSI2999Project.savedGame = (listView.getSelectionModel().getSelectedItem().toString());
-        thisStage.close();
+        try {
+            CSI2999Project.savedGame = (listView.getSelectionModel().getSelectedItem().toString());
+            thisStage.close();
+        } catch (Exception e) {
+            System.out.println("ERROR!!");
+        }
     }
 
     //Thie with Exit out of the Save Nenu

@@ -1,5 +1,6 @@
 package main;
 
+import DecisionMaker.Decision;
 import java.util.ArrayList;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -11,7 +12,10 @@ public class CSI2999Project extends Application {
 
     final protected String gameNames = "Human Within";
     public static String savedGame;
-    public static ArrayList<String> decisions = new ArrayList<String>();
+    public static ArrayList<String> fileList = new ArrayList<String>();
+    public static ArrayList<Decision> decisionList = new ArrayList();
+    public static int numberOfDescision;
+    public static String question;
 
     @Override
     public void start(Stage stage) throws Exception {
