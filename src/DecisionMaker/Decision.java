@@ -31,8 +31,8 @@ public class Decision {
         return Answer;
     }
 
-    public void decisionQuestion(String TextFileQ) {
-        
+    //Number of Descision and Question load from file
+    public void decisionQuestion(String TextFileQ) {  
         try {
             BufferedReader reader = new BufferedReader(new FileReader(TextFileQ));
             String f;
@@ -50,7 +50,8 @@ public class Decision {
         } catch (IOException ex) {
         }
     }
-
+    
+    //Clear decisionList then add new file to decisionList
     public void decisionAnswers(String TextFileA) {
         CSI2999Project.decisionList.clear();
         try (Scanner fileIn = new Scanner(new File(TextFileA))) {

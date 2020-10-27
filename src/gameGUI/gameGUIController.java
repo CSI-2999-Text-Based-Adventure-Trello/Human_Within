@@ -28,11 +28,11 @@ public class gameGUIController implements Initializable {
     private Button choiceD;
     @FXML
     private Button choiceE;
+    @FXML
+     TextArea textArea;
     switchBetweenScenes sBS = new switchBetweenScenes();
     Decision dec = new Decision();
-
-//     @FXML
-//     TextArea textArea;
+     
 //     @FXML
 //     private Button btnVictory1;
 //     @FXML
@@ -57,6 +57,7 @@ public class gameGUIController implements Initializable {
     @FXML
     private void choiceA(ActionEvent event) {
         String textFileQ, textFileA;
+        //Add Q.txt or A.txt to open 0001Q.txt & 0001A.txt
         textFileQ = CSI2999Project.decisionList.get(0).getTextfile() + "Q.txt";
         textFileA = CSI2999Project.decisionList.get(0).getTextfile() + "A.txt";
         dec.decisionQuestion(textFileQ);
@@ -66,6 +67,7 @@ public class gameGUIController implements Initializable {
     }
 
     public void labelButtons() {
+        //Set set Text to the decision and set them visible
         for (int i = 0; i < CSI2999Project.numberOfDescision; i++) {
             switch (i) {
                 case 0:
@@ -90,6 +92,7 @@ public class gameGUIController implements Initializable {
                     break;
             }
         }
+        //Set any other choice to invisible if not being used
         for (int i = CSI2999Project.numberOfDescision; i < 5; i++) {
             switch (i) {
                 case 0:
@@ -121,11 +124,11 @@ public class gameGUIController implements Initializable {
         labelButtons();
     }
 
-//     @FXML
-//     private void handleEndButton1(ActionEvent event) {
-//           Stage thisStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-//         sBS.switchScence("/endScreen/endScreen2.fxml", thisStage);
-//     }
+     @FXML
+     private void handleEndButton1(ActionEvent event) {
+           Stage thisStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+         sBS.switchScence("/endScreen/endScreen2.fxml", thisStage);
+     }
 
 //     @FXML
 //     private void handleChoiceA(ActionEvent event) {
@@ -137,4 +140,5 @@ public class gameGUIController implements Initializable {
 //         Stage thisStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 //         sBS.switchScence("/endScreen/endScreen2.fxml", thisStage);
 //     }
+     
 }
