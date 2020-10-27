@@ -31,8 +31,16 @@ public class gameGUIController implements Initializable {
     switchBetweenScenes sBS = new switchBetweenScenes();
     Decision dec = new Decision();
 
-    @FXML
-    TextArea textArea;
+//     @FXML
+//     TextArea textArea;
+//     @FXML
+//     private Button btnVictory1;
+//     @FXML
+//     private Button btnA;
+//     @FXML
+//     private Button btnB;
+//     @FXML
+//     private TextArea txtOutput;
 
     @FXML
     private void tempButtonAction(ActionEvent event) throws IOException {
@@ -112,4 +120,21 @@ public class gameGUIController implements Initializable {
         dec.decisionAnswers(textFileA);
         labelButtons();
     }
+
+//     @FXML
+//     private void handleEndButton1(ActionEvent event) {
+//           Stage thisStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+//         sBS.switchScence("/endScreen/endScreen2.fxml", thisStage);
+//     }
+
+//     @FXML
+//     private void handleChoiceA(ActionEvent event) {
+//         txtOutput.setText("Select Choice B to win");
+//     }
+
+//     @FXML
+//     private void handleChoiceB(ActionEvent event) {
+//         Stage thisStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+//         sBS.switchScence("/endScreen/endScreen2.fxml", thisStage);
+//     }
 }

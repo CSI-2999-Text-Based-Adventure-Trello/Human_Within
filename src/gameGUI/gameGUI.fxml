@@ -24,6 +24,7 @@
          <children>
             <Label contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="209.0" text=" Player Status" />
             <Button fx:id="btnEnd" mnemonicParsing="false" onAction="#handleEndButton" text="tempEndBtn" />
+            <Button fx:id="btnVictory1" mnemonicParsing="false" onAction="#handleEndButton1" text="tempEndBtn2" />
          </children>
          <opaqueInsets>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
