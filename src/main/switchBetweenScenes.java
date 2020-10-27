@@ -9,6 +9,7 @@ import javafx.stage.Stage;
 
 public class switchBetweenScenes {
 
+    //Switches between scences keeps it in the same windows
     public void switchScence(String scence, Stage thisStage) {
         try {
             Parent gameGUILoader = FXMLLoader.load(getClass().getResource(scence));
@@ -20,6 +21,7 @@ public class switchBetweenScenes {
         }
     }
 
+    //Pop-Up new Window
     public void newScence(String scence) {
         try {
             FXMLLoader saveMenuLoader = new FXMLLoader(getClass().getResource(scence));

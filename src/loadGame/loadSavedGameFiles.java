@@ -27,7 +27,8 @@ public class loadSavedGameFiles {
             listView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
         }
     }
-
+    
+    //load different files from users save game
     public void loadSaveGame(String fileName) throws FileNotFoundException, IOException {
         File file = new File(fileName);
         File[] fileArray = file.listFiles();
@@ -39,9 +40,6 @@ public class loadSavedGameFiles {
                     CSI2999Project.fileList.add(fileList);
                 }
             }
-//            for (String i : CSI2999Project.fileList) {
-//                System.out.println(i);
-//            }
         }
     }
 }
