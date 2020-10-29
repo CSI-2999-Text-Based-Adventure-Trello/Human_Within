@@ -1,4 +1,0 @@
-2
-Do you like Gum?
-0004 Yes
-0005 No

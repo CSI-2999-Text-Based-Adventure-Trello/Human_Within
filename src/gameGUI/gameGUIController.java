@@ -13,6 +13,7 @@ import javafx.stage.Stage;
 import main.switchBetweenScenes;
 import DecisionMaker.Decision;
 import main.CSI2999Project;
+import Story.storyDesisonManagement;
 
 public class gameGUIController implements Initializable {
 
@@ -29,10 +30,11 @@ public class gameGUIController implements Initializable {
     @FXML
     private Button choiceE;
     @FXML
-     TextArea textArea;
+    TextArea textArea;
     switchBetweenScenes sBS = new switchBetweenScenes();
     Decision dec = new Decision();
-     
+    storyDesisonManagement sDM = new storyDesisonManagement();
+
 //     @FXML
 //     private Button btnVictory1;
 //     @FXML
@@ -41,7 +43,6 @@ public class gameGUIController implements Initializable {
 //     private Button btnB;
 //     @FXML
 //     private TextArea txtOutput;
-
     @FXML
     private void tempButtonAction(ActionEvent event) throws IOException {
         Stage thisStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -56,13 +57,32 @@ public class gameGUIController implements Initializable {
 
     @FXML
     private void choiceA(ActionEvent event) {
-        String textFileQ, textFileA;
-        //Add Q.txt or A.txt to open 0001Q.txt & 0001A.txt
-        textFileQ = CSI2999Project.decisionList.get(0).getTextfile() + "Q.txt";
-        textFileA = CSI2999Project.decisionList.get(0).getTextfile() + "A.txt";
-        dec.decisionQuestion(textFileQ);
+        sDM.fileManagement(0);
         textArea.setText(CSI2999Project.question);
-        dec.decisionAnswers(textFileA);
+        labelButtons();
+    }
+    @FXML
+    private void choiceB(ActionEvent event) {
+        sDM.fileManagement(1);
+        textArea.setText(CSI2999Project.question);
+        labelButtons();
+    }
+    @FXML
+    private void choiceC(ActionEvent event) {
+        sDM.fileManagement(2);
+        textArea.setText(CSI2999Project.question);
+        labelButtons();
+    }
+    @FXML
+    private void choiceD(ActionEvent event) {
+        sDM.fileManagement(3);
+        textArea.setText(CSI2999Project.question);
+        labelButtons();
+    }
+    @FXML
+    private void choiceE(ActionEvent event) {
+        sDM.fileManagement(4);
+        textArea.setText(CSI2999Project.question);
         labelButtons();
     }
 
@@ -116,29 +136,24 @@ public class gameGUIController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        String textFileQ = "0001Q.txt";
-        String textFileA = "0001A.txt";
-        dec.decisionQuestion(textFileQ);
+        sDM.fileManagement("0001");
         textArea.setText(CSI2999Project.question);
-        dec.decisionAnswers(textFileA);
         labelButtons();
     }
 
-     @FXML
-     private void handleEndButton1(ActionEvent event) {
-           Stage thisStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-         sBS.switchScence("/endScreen/endScreen2.fxml", thisStage);
-     }
+    @FXML
+    private void handleEndButton1(ActionEvent event) {
+        Stage thisStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        sBS.switchScence("/endScreen/endScreen2.fxml", thisStage);
+    }
 
 //     @FXML
 //     private void handleChoiceA(ActionEvent event) {
 //         txtOutput.setText("Select Choice B to win");
 //     }
-
 //     @FXML
 //     private void handleChoiceB(ActionEvent event) {
 //         Stage thisStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 //         sBS.switchScence("/endScreen/endScreen2.fxml", thisStage);
 //     }
-     
 }
