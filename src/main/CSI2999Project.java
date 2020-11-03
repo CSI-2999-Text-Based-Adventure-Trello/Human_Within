@@ -14,8 +14,10 @@ public class CSI2999Project extends Application {
     public static String savedGame;
     public static ArrayList<String> fileList = new ArrayList<String>();
     public static ArrayList<Decision> decisionList = new ArrayList();
-    public static int numberOfDescision;
+    public static int numberOfDescision = 0;
     public static String question;
+    public static int newGame;
+    public static String fileLocation = "C:\\Users\\PC\\Documents\\savedGames";
 
     @Override
     public void start(Stage stage) throws Exception {

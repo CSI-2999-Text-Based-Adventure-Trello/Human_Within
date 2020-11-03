@@ -20,6 +20,7 @@ public class startMenuController implements Initializable {
     @FXML
     private void startButtonAction(ActionEvent event) throws IOException {
         Stage thisStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        CSI2999Project.newGame = 1;
         sBS.newScence("/saveMenu/saveMenu.fxml");
         try {
             load.loadSaveGame(CSI2999Project.savedGame);
