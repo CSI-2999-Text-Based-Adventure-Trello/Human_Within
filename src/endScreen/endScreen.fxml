@@ -2,17 +2,26 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="540.0" prefWidth="740.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="endScreen.endScreenController">
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="750.0" style="-fx-background-color: black; -fx-border-color: #1857f5;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="endScreen.endScreenController">
    <children>
-      <Button fx:id="btnSrtrOver" layoutX="293.0" layoutY="318.0" mnemonicParsing="false" onAction="#handleStartOver" prefHeight="56.0" prefWidth="153.0" text="Start Over" />
-      <Label fx:id="lblGameOver" alignment="CENTER" contentDisplay="CENTER" layoutX="161.0" layoutY="71.0" prefHeight="150.0" prefWidth="418.0" text="Game Over">
+      <Button fx:id="btnSrtrOver" layoutX="298.0" layoutY="513.0" mnemonicParsing="false" onAction="#handleStartOver" prefHeight="55.0" prefWidth="155.0" style="-fx-background-color: black; -fx-border-color: #1857f5;" text="Start Over" textFill="WHITE">
          <font>
-            <Font size="40.0" />
+            <Font name="Lucida Sans Typewriter Regular" size="12.0" />
+         </font></Button>
+      <Label fx:id="lblGameOver" alignment="CENTER" contentDisplay="CENTER" layoutX="161.0" layoutY="120.0" prefHeight="150.0" prefWidth="418.0" text="Game Over" textFill="RED">
+         <font>
+            <Font name="Lucida Sans Typewriter Regular" size="40.0" />
          </font>
       </Label>
+      <ImageView fitHeight="238.0" fitWidth="600.0" layoutX="76.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/gameover.PNG" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
