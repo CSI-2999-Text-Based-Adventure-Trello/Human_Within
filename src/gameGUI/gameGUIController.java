@@ -61,24 +61,28 @@ public class gameGUIController implements Initializable {
         textArea.setText(CSI2999Project.question);
         labelButtons();
     }
+
     @FXML
     private void choiceB(ActionEvent event) {
         sDM.fileManagement(1);
         textArea.setText(CSI2999Project.question);
         labelButtons();
     }
+
     @FXML
     private void choiceC(ActionEvent event) {
         sDM.fileManagement(2);
         textArea.setText(CSI2999Project.question);
         labelButtons();
     }
+
     @FXML
     private void choiceD(ActionEvent event) {
         sDM.fileManagement(3);
         textArea.setText(CSI2999Project.question);
         labelButtons();
     }
+
     @FXML
     private void choiceE(ActionEvent event) {
         sDM.fileManagement(4);
@@ -136,7 +140,10 @@ public class gameGUIController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        sDM.fileManagement("0001");
+        if (CSI2999Project.newGame == 1) {
+            sDM.fileManagement("0001");
+            CSI2999Project.newGame = 0;
+        }
         textArea.setText(CSI2999Project.question);
         labelButtons();
     }
