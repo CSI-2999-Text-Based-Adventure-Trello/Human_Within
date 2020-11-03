@@ -27,20 +27,18 @@ public class loadSavedGameFiles {
             listView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
         }
     }
-
+    
+    //load different files from users save game
     public void loadSaveGame(String fileName) throws FileNotFoundException, IOException {
         File file = new File(fileName);
         File[] fileArray = file.listFiles();
         for (File files : fileArray) {
             if (files.toString().contains("saveGame.txt")) {
                 BufferedReader reader = new BufferedReader(new FileReader(files.toString()));
-                String decisions;
-                while ((decisions = reader.readLine()) != null) {
-                    CSI2999Project.decisions.add(decisions);
+                String fileList;
+                while ((fileList = reader.readLine()) != null) {
+                    CSI2999Project.fileList.add(fileList);
                 }
-            }
-            for (String i : CSI2999Project.decisions) {
-                System.out.println(i);
             }
         }
     }

@@ -22,7 +22,7 @@
     <RowConstraints maxHeight="267.0" minHeight="10.0" prefHeight="21.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <TextArea fx:id="txtOutput" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0" prefWidth="600.0" style="-fx-control-inner-background: black; -fx-text-fill: white;" wrapText="true">
+      <TextArea fx:id="txtOutput" editable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0" prefWidth="600.0" style="-fx-control-inner-background: black; -fx-text-fill: white;" wrapText="true">
          <font>
             <Font name="Lucida Sans Typewriter Regular" size="12.0" />
          </font></TextArea>
@@ -54,28 +54,30 @@
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </opaqueInsets>
          <children>
-            <Button fx:id="btnA" alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleChoiceA" prefHeight="25.0" prefWidth="525.0" style="-fx-border-color: #1857f5; -fx-background-color: black;" text="Choice A" textFill="WHITE">
+            <Button fx:id="choiceA" alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#choiceA" prefHeight="25.0" prefWidth="525.0" style="-fx-border-color: #1857f5; -fx-background-color: black;" text="Choice A" textFill="WHITE">
                <font>
                   <Font name="Lucida Sans Typewriter Regular" size="12.0" />
                </font></Button>
-            <Button fx:id="btnB" alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleChoiceB" prefHeight="25.0" prefWidth="527.0" style="-fx-background-color: black; -fx-border-color: #1857f5;" text="Choice B" textFill="WHITE">
+                
+            <Button fx:id="choiceB" alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#choiceB" prefHeight="25.0" prefWidth="527.0" style="-fx-border-color: #1857f5; -fx-background-color: black;" text="Choice B" textFill="WHITE">
                <font>
                   <Font name="Lucida Sans Typewriter Regular" size="12.0" />
                </font></Button>
-            <Button alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="25.0" prefWidth="529.0" style="-fx-background-color: black; -fx-border-color: #1857f5;" text="Choice C" textFill="WHITE">
+            <Button fx:id="choiceC" alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#choiceC" prefHeight="25.0" prefWidth="529.0" style="-fx-border-color: #1857f5; -fx-background-color: black;" text="Choice C" textFill="WHITE">
+               <font>
+                  <Font name="Lucida Sans Typewriter Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="choiceD" alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#choiceD" prefHeight="25.0" prefWidth="680.0" style="-fx-border-color: #1857f5; -fx-background-color: black;" text="Choice D" textFill="WHITE">
                <font>
                   <Font name="Lucida Sans Typewriter Regular" size="12.0" />
                </font></Button>
-            <Button alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="25.0" prefWidth="680.0" style="-fx-background-color: black; -fx-border-color: #1857f5;" text="Choice D" textFill="WHITE">
-               <font>
-                  <Font name="Lucida Sans Typewriter Regular" size="12.0" />
-               </font></Button>
+            
          </children>
          <padding>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </padding>
       </VBox>
-      <Button alignment="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: black; -fx-border-color: white;" text="Next" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+      <Button alignment="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: black; -fx-border-color: #1857f5;" text="Next" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
          <font>
             <Font name="Lucida Sans Typewriter Regular" size="12.0" />
          </font>
