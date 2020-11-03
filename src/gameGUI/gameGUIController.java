@@ -28,21 +28,11 @@ public class gameGUIController implements Initializable {
     @FXML
     private Button choiceD;
     @FXML
-    private Button choiceE;
-    @FXML
-    TextArea textArea;
+    TextArea txtOutput;
     switchBetweenScenes sBS = new switchBetweenScenes();
     Decision dec = new Decision();
     storyDesisonManagement sDM = new storyDesisonManagement();
-
-//     @FXML
-//     private Button btnVictory1;
-//     @FXML
-//     private Button btnA;
-//     @FXML
-//     private Button btnB;
-//     @FXML
-//     private TextArea txtOutput;
+    
     @FXML
     private void tempButtonAction(ActionEvent event) throws IOException {
         Stage thisStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -58,31 +48,25 @@ public class gameGUIController implements Initializable {
     @FXML
     private void choiceA(ActionEvent event) {
         sDM.fileManagement(0);
-        textArea.setText(CSI2999Project.question);
+        txtOutput.setText(CSI2999Project.question);
         labelButtons();
     }
     @FXML
     private void choiceB(ActionEvent event) {
         sDM.fileManagement(1);
-        textArea.setText(CSI2999Project.question);
+        txtOutput.setText(CSI2999Project.question);
         labelButtons();
     }
     @FXML
     private void choiceC(ActionEvent event) {
         sDM.fileManagement(2);
-        textArea.setText(CSI2999Project.question);
+        txtOutput.setText(CSI2999Project.question);
         labelButtons();
     }
     @FXML
     private void choiceD(ActionEvent event) {
         sDM.fileManagement(3);
-        textArea.setText(CSI2999Project.question);
-        labelButtons();
-    }
-    @FXML
-    private void choiceE(ActionEvent event) {
-        sDM.fileManagement(4);
-        textArea.setText(CSI2999Project.question);
+        txtOutput.setText(CSI2999Project.question);
         labelButtons();
     }
 
@@ -106,14 +90,10 @@ public class gameGUIController implements Initializable {
                     choiceD.setText(CSI2999Project.decisionList.get(i).getAnswer());
                     choiceD.setVisible(true);
                     break;
-                case 4:
-                    choiceE.setText(CSI2999Project.decisionList.get(i).getAnswer());
-                    choiceE.setVisible(true);
-                    break;
             }
         }
         //Set any other choice to invisible if not being used
-        for (int i = CSI2999Project.numberOfDescision; i < 5; i++) {
+        for (int i = CSI2999Project.numberOfDescision; i <= 3; i++) {
             switch (i) {
                 case 0:
                     choiceA.setVisible(false);
@@ -127,9 +107,6 @@ public class gameGUIController implements Initializable {
                 case 3:
                     choiceD.setVisible(false);
                     break;
-                case 4:
-                    choiceE.setVisible(false);
-                    break;
             }
         }
     }
@@ -137,7 +114,7 @@ public class gameGUIController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         sDM.fileManagement("0001");
-        textArea.setText(CSI2999Project.question);
+        txtOutput.setText(CSI2999Project.question);
         labelButtons();
     }
 
@@ -146,14 +123,4 @@ public class gameGUIController implements Initializable {
         Stage thisStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         sBS.switchScence("/endScreen/endScreen2.fxml", thisStage);
     }
-
-//     @FXML
-//     private void handleChoiceA(ActionEvent event) {
-//         txtOutput.setText("Select Choice B to win");
-//     }
-//     @FXML
-//     private void handleChoiceB(ActionEvent event) {
-//         Stage thisStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-//         sBS.switchScence("/endScreen/endScreen2.fxml", thisStage);
-//     }
 }
