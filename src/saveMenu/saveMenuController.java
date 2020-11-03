@@ -36,6 +36,10 @@ public class saveMenuController implements Initializable {
             System.out.println("ERROR!!");
         }
     }
+    
+    @FXML
+    private void newGameButtonAction(ActionEvent event) {
+    }
 
     //Thie with Exit out of the Save Nenu
     @FXML
