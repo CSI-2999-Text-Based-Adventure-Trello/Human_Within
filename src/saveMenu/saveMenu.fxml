@@ -2,7 +2,9 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
@@ -15,6 +17,11 @@
       <ListView fx:id="listView" prefHeight="478.0" prefWidth="728.0" style="-fx-background-color: black; -fx-border-color: white; -fx-text-fill: white;" />
       <HBox alignment="CENTER" prefHeight="72.0" prefWidth="580.0" spacing="10.0">
          <children>
+            <Button fx:id="newGame" mnemonicParsing="false" onAction="#newGameButtonAction" prefHeight="55.0" prefWidth="155.0" style="-fx-background-color: black; -fx-border-color: white;" text="New Game" textFill="WHITE">
+               <font>
+                  <Font name="Lucida Sans Typewriter Bold" size="12.0" />
+               </font>
+            </Button>
             <Button mnemonicParsing="false" onAction="#loadGameButtonAction" prefHeight="55.0" prefWidth="155.0" style="-fx-background-color: black; -fx-border-color: white;" text="Load Game" textFill="WHITE">
                <font>
                   <Font name="Lucida Sans Typewriter Bold" size="12.0" />
@@ -27,6 +34,16 @@
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="33.0" prefWidth="693.0" spacing="10.0">
+         <children>
+            <Label fx:id="nameLabel" lineSpacing="10.0" text="Enter in Name:" textFill="WHITE" visible="false">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nameTextField" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="588.0" visible="false" />
+         </children>
       </HBox>
    </children>
 </VBox>
