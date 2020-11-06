@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 public class CSI2999Project extends Application {
 
     final protected String gameNames = "Human Within";
-    public static String savedGame;
+    public static String savedGame = null;
     public static ArrayList<String> fileList = new ArrayList<String>();
     public static ArrayList<Decision> decisionList = new ArrayList();
     public static int numberOfDescision = 0;
