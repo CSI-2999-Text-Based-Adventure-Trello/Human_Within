@@ -17,7 +17,7 @@ public class CSI2999Project extends Application {
     public static int numberOfDescision = 0;
     public static String question;
     public static int newGame;
-    public static String fileLocation = "C:\\Users\\PC\\Documents\\savedGames";
+    public static String fileLocation = "C:\\savedGames";
     public static String player;
 
     @Override
