@@ -65,16 +65,4 @@ public class Decision {
         } catch (FileNotFoundException ex) {
         }
     }
-    
-    public void decisionStoryText(String TextFileST){
-        try {
-            BufferedReader reader = new BufferedReader(new FileReader(TextFileST));     // read story text from given file
-            String f;
-            while ((f = reader.readLine()) != null) {
-                CSI2999Project.storyText = f;
-            }
-        } catch (FileNotFoundException ex) {
-        } catch (IOException ex) {
-        }
-    }
 }
