@@ -1,6 +1,0 @@
-0030
-Sleep 4 hours
-0031
-Sleep 8 hours
-0032
-Slepp 12 hours
