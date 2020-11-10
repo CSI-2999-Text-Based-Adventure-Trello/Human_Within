@@ -1,6 +1,0 @@
-0007
-Go to surface
-0008
-Go to data core
-0009
-Look for another option
