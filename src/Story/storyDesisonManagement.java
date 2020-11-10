@@ -3,13 +3,16 @@ package Story;
 import main.CSI2999Project;
 import main.switchBetweenScenes;
 import DecisionMaker.Decision;
+import java.io.IOException;
+import java.nio.file.Files;
 import java.nio.file.Paths;
+import javafx.scene.shape.Path;
 
 public class storyDesisonManagement {
 
     switchBetweenScenes sBS = new switchBetweenScenes();
     Decision dec = new Decision();
-    String location = "./src//Story/", question = "Q.txt", answer = "A.txt", storyText="ST.txt";
+    String location = "./src//Story/", question = "Q.txt", answer = "A.txt", storyText = "ST.txt";
 
     //This method is use for nonstarter 
     //when the decisionList has the picked in it
