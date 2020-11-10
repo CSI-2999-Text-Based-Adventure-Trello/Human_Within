@@ -21,10 +21,7 @@ public class loadSavedGameFiles {
             System.out.println("File created");
         } else {
             for (File folders : folderArray) {
-                String str = folders.toString();
-                int index = str.lastIndexOf("\\");
-                str = str.substring(index + 1);
-//                list.add(str);
+                CSI2999Project.player = folders.getName();
                 list.add(folders);
             }
             listView.getItems().addAll(list);
@@ -35,7 +32,6 @@ public class loadSavedGameFiles {
     //load different files from users save game
     public void loadSaveGame(String fileName) throws FileNotFoundException, IOException {
         try {
-
             File file = new File(fileName);
             File[] fileArray = file.listFiles();
             for (File files : fileArray) {

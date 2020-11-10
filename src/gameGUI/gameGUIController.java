@@ -33,7 +33,7 @@ public class gameGUIController implements Initializable {
     @FXML
     private Button choiceD;
     @FXML
-    TextArea txtOutput;
+    private TextArea txtOutput;
     switchBetweenScenes sBS = new switchBetweenScenes();
     Decision dec = new Decision();
     storyDesisonManagement sDM = new storyDesisonManagement();
@@ -89,13 +89,23 @@ public class gameGUIController implements Initializable {
     private void choiceD(ActionEvent event) {
         choiceMaker(3);
     }
-
      public void choiceMaker(int number) {
         sDM.fileManagement(number);
         txtOutput.setText(CSI2999Project.storyText);
         hideButtons();
-        sG.saveGameFile(CSI2999Project.decisionList.get(number).getTextfile().trim());
+    
+    @FXML
+    private void handleEndButton1(ActionEvent event) {
+        Stage thisStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        sBS.switchScence("/endScreen/endScreen2.fxml", thisStage);
     }
+    
+//     public void choiceMaker(int number) {
+//         sDM.fileManagement(number);
+//         txtOutput.setText(CSI2999Project.question);
+//         labelButtons();
+//         sG.saveGameFile(CSI2999Project.decisionList.get(number).getTextfile().trim());
+//     }
      
     public void labelButtons() {
         //Set set Text to the decision and set them visible
@@ -120,7 +130,7 @@ public class gameGUIController implements Initializable {
             }
         }
         //Set any other choice to invisible if not being used
-        for (int i = CSI2999Project.numberOfDescision; i < 5; i++) {
+        for (int i = CSI2999Project.numberOfDescision; i <= 3; i++) {
             switch (i) {
                 case 0:
                     choiceA.setVisible(false);
@@ -137,31 +147,22 @@ public class gameGUIController implements Initializable {
             }
         }
     }
-
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        if (CSI2999Project.newGame == 1) {
-            sDM.fileManagement("0001");
-            txtOutput.setText(CSI2999Project.storyText);
+            //Open savedGame and then read saveGame.txt file
+            String tempString = CSI2999Project.player + "\\saveGame.txt";
+            File file = new File(tempString);
+            try {
+                lSGF.loadSaveGame(CSI2999Project.fileLocation);
+            } catch (IOException ex) {
+                Logger.getLogger(gameGUIController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            sDM.fileManagement(CSI2999Project.fileList.get(CSI2999Project.fileList.size() - 1));
             CSI2999Project.newGame = 0;
         }
-        hideButtons();
-
+        txtOutput.setText(CSI2999Project.question);
+        //labelButtons();
+        //hideButtons();
     }
-
-    @FXML
-    private void handleEndButton1(ActionEvent event) {
-        Stage thisStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        sBS.switchScence("/endScreen/endScreen2.fxml", thisStage);
-    }
-
-//     @FXML
-//     private void handleChoiceA(ActionEvent event) {
-//         txtOutput.setText("Select Choice B to win");
-//     }
-//     @FXML
-//     private void handleChoiceB(ActionEvent event) {
-//         Stage thisStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-//         sBS.switchScence("/endScreen/endScreen2.fxml", thisStage);
-//     }
 }
