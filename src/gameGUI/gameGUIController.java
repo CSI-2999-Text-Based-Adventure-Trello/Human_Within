@@ -14,6 +14,11 @@ import main.switchBetweenScenes;
 import DecisionMaker.Decision;
 import main.CSI2999Project;
 import Story.storyDesisonManagement;
+import java.io.File;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import loadGame.loadSavedGameFiles;
+import loadGame.saveGame;
 
 public class gameGUIController implements Initializable {
 
@@ -32,15 +37,9 @@ public class gameGUIController implements Initializable {
     switchBetweenScenes sBS = new switchBetweenScenes();
     Decision dec = new Decision();
     storyDesisonManagement sDM = new storyDesisonManagement();
+    loadSavedGameFiles lSGF = new loadSavedGameFiles();
+    saveGame sG = new saveGame();
 
-//     @FXML
-//     private Button btnVictory1;
-//     @FXML
-//     private Button btnA;
-//     @FXML
-//     private Button btnB;
-//     @FXML
-//     private TextArea txtOutput;
     @FXML
     private void tempButtonAction(ActionEvent event) throws IOException {
         Stage thisStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -73,35 +72,31 @@ public class gameGUIController implements Initializable {
     
     @FXML
     private void choiceA(ActionEvent event) {
-        sDM.fileManagement(0);
-        txtOutput.setText(CSI2999Project.storyText);
-        hideButtons();
-
+        choiceMaker(0);
     }
 
     @FXML
     private void choiceB(ActionEvent event) {
-        sDM.fileManagement(1);
-        txtOutput.setText(CSI2999Project.storyText);
-        hideButtons();
-
+        choiceMaker(1);
     }
 
     @FXML
     private void choiceC(ActionEvent event) {
-        sDM.fileManagement(2);
-        txtOutput.setText(CSI2999Project.storyText);
-        hideButtons();
-
+        choiceMaker(2);
     }
 
     @FXML
     private void choiceD(ActionEvent event) {
-        sDM.fileManagement(3);
-        txtOutput.setText(CSI2999Project.storyText);
-        hideButtons();
+        choiceMaker(3);
     }
 
+     public void choiceMaker(int number) {
+        sDM.fileManagement(number);
+        txtOutput.setText(CSI2999Project.storyText);
+        hideButtons();
+        sG.saveGameFile(CSI2999Project.decisionList.get(number).getTextfile().trim());
+    }
+     
     public void labelButtons() {
         //Set set Text to the decision and set them visible
         for (int i = 0; i < CSI2999Project.numberOfDescision; i++) {
