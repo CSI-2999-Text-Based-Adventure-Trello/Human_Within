@@ -1,7 +1,7 @@
-0101
+0103
 Steal from someone's house
-
+0104
 Steal from clothing place-game over
-
+0105
 Ask someone for clothes-game over
 
