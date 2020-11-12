@@ -24,7 +24,6 @@ public class startMenuController implements Initializable {
         sBS.newScence("/UI/saveMenu.fxml");
         try {
             if (!(CSI2999Project.savedGame == null)) {
-                System.out.println("123");
                 load.loadSaveGame(CSI2999Project.savedGame);
                 sBS.switchScence("/UI/gameGUI.fxml", thisStage);
             } else {

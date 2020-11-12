@@ -15,7 +15,7 @@ public class newGameFiles {
             saveGameTXT(tempString);
             InventoryTXT(tempString);
         } else {
-            System.out.println("456");
+            System.out.println("File Does not Exist");
         }
     }
 

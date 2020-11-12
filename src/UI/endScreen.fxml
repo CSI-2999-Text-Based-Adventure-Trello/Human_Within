@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="750.0" style="-fx-background-color: black; -fx-border-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="endScreen.endScreenController">
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="750.0" style="-fx-background-color: black; -fx-border-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.endScreenController">
    <children>
       <Button fx:id="btnSrtrOver" layoutX="298.0" layoutY="513.0" mnemonicParsing="false" onAction="#handleStartOver" prefHeight="55.0" prefWidth="155.0" style="-fx-background-color: black; -fx-border-color: white;" text="Start Over" textFill="WHITE">
          <font>
