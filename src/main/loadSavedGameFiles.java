@@ -1,11 +1,10 @@
-package loadGame;
+package main;
 
 import java.io.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.ListView;
 import javafx.scene.control.SelectionMode;
-import main.CSI2999Project;
 
 //This class load the save Folder from a folder.
 public class loadSavedGameFiles {

@@ -1,6 +1,5 @@
 package main;
 
-import DecisionMaker.Decision;
 import java.util.ArrayList;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

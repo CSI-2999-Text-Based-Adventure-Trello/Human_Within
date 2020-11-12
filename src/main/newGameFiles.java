@@ -1,4 +1,4 @@
-package loadGame;
+package main;
 
 import java.io.File;
 import java.io.FileWriter;
