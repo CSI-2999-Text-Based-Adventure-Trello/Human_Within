@@ -16,6 +16,7 @@ public class CSI2999Project extends Application {
     public static ArrayList<Decision> decisionList = new ArrayList();
     public static int numberOfDescision = 0;
     public static String question;
+    public static String storyText; //added storyText variable
     public static int newGame;
     public static String fileLocation = "C:\\savedGames";
     public static String player;

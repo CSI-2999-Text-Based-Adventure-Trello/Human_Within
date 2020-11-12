@@ -1,8 +1,8 @@
-0002
-Up
-0003
-Down
-0004
-Left
 0005
-Right
+Your front lawn.
+0005
+Your car in the driveway.
+0005
+Too sunny out, can't see shit
+0005
+Your neighbor watering their flowers.
