@@ -34,6 +34,7 @@ public class gameGUIController implements Initializable {
     private Button choiceD;
     @FXML
     private TextArea txtOutput;
+    private int number;
     switchBetweenScenes sBS = new switchBetweenScenes();
     Decision dec = new Decision();
     storyDesisonManagement sDM = new storyDesisonManagement();
@@ -54,12 +55,12 @@ public class gameGUIController implements Initializable {
 
     @FXML
     private void contButtonAction(ActionEvent event) throws IOException {
-
         txtOutput.setText(CSI2999Project.question);
         String textFileQ;
         textFileQ = "./src//Story/" + CSI2999Project.question;
         dec.decisionQuestion(textFileQ);
         labelButtons();
+        sG.saveGameFile(CSI2999Project.decisionList.get(number).getTextfile().trim());
     }
 
     @FXML
@@ -72,22 +73,26 @@ public class gameGUIController implements Initializable {
 
     @FXML
     private void choiceA(ActionEvent event) {
-        choiceMaker(0);
+        number = 0;
+        choiceMaker(number);
     }
 
     @FXML
     private void choiceB(ActionEvent event) {
-        choiceMaker(1);
+        number = 1;
+        choiceMaker(number);
     }
 
     @FXML
     private void choiceC(ActionEvent event) {
-        choiceMaker(2);
+        number = 2;
+        choiceMaker(number);
     }
 
     @FXML
     private void choiceD(ActionEvent event) {
-        choiceMaker(3);
+        number = 3;
+        choiceMaker(number);
     }
 
     public void choiceMaker(int number) {
