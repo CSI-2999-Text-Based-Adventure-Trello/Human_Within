@@ -51,10 +51,10 @@ public class gameGUIController implements Initializable {
         Stage thisStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         sBS.switchScence("/endScreen/endScreen.fxml", thisStage);
     }
-    
+
     @FXML
-     private void contButtonAction(ActionEvent event) throws IOException {
-        
+    private void contButtonAction(ActionEvent event) throws IOException {
+
         txtOutput.setText(CSI2999Project.question);
         String textFileQ;
         textFileQ = "./src//Story/" + CSI2999Project.question;
@@ -63,13 +63,13 @@ public class gameGUIController implements Initializable {
     }
 
     @FXML
-    private void hideButtons(){         // hide buttons when story text shown
+    private void hideButtons() {         // hide buttons when story text shown
         choiceA.setVisible(false);
         choiceB.setVisible(false);
         choiceC.setVisible(false);
         choiceD.setVisible(false);
-    } 
-    
+    }
+
     @FXML
     private void choiceA(ActionEvent event) {
         choiceMaker(0);
@@ -89,24 +89,25 @@ public class gameGUIController implements Initializable {
     private void choiceD(ActionEvent event) {
         choiceMaker(3);
     }
-     public void choiceMaker(int number) {
+
+    public void choiceMaker(int number) {
         sDM.fileManagement(number);
         txtOutput.setText(CSI2999Project.storyText);
         hideButtons();
-    
+    }
+
     @FXML
     private void handleEndButton1(ActionEvent event) {
         Stage thisStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         sBS.switchScence("/endScreen/endScreen2.fxml", thisStage);
     }
-    
+
 //     public void choiceMaker(int number) {
 //         sDM.fileManagement(number);
 //         txtOutput.setText(CSI2999Project.question);
 //         labelButtons();
 //         sG.saveGameFile(CSI2999Project.decisionList.get(number).getTextfile().trim());
 //     }
-     
     public void labelButtons() {
         //Set set Text to the decision and set them visible
         for (int i = 0; i < CSI2999Project.numberOfDescision; i++) {
@@ -147,20 +148,19 @@ public class gameGUIController implements Initializable {
             }
         }
     }
-    
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-            //Open savedGame and then read saveGame.txt file
-            String tempString = CSI2999Project.player + "\\saveGame.txt";
-            File file = new File(tempString);
-            try {
-                lSGF.loadSaveGame(CSI2999Project.fileLocation);
-            } catch (IOException ex) {
-                Logger.getLogger(gameGUIController.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            sDM.fileManagement(CSI2999Project.fileList.get(CSI2999Project.fileList.size() - 1));
-            CSI2999Project.newGame = 0;
+        //Open savedGame and then read saveGame.txt file
+        String tempString = CSI2999Project.player + "\\saveGame.txt";
+        File file = new File(tempString);
+        try {
+            lSGF.loadSaveGame(CSI2999Project.fileLocation);
+        } catch (IOException ex) {
+            Logger.getLogger(gameGUIController.class.getName()).log(Level.SEVERE, null, ex);
         }
+        sDM.fileManagement(CSI2999Project.fileList.get(CSI2999Project.fileList.size() - 1));
+        CSI2999Project.newGame = 0;
         txtOutput.setText(CSI2999Project.question);
         //labelButtons();
         //hideButtons();
