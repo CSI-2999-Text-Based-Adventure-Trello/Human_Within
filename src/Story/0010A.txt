@@ -1,0 +1,6 @@
+0100
+Inside the opened locker
+0101
+Behind the door- game over
+0102
+Under the table- game over
