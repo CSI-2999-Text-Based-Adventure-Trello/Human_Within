@@ -16,7 +16,8 @@ public class CSI2999Project extends Application {
     public static int numberOfDescision = 0;
     public static String question;
     public static String storyText; //added storyText variable
-    public static int newGame;
+    public static boolean newGame;
+    public static boolean hideText;
     public static String fileLocation = "C:\\savedGames";
     public static String player;
 

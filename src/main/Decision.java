@@ -31,7 +31,7 @@ public class Decision {
     }
 
     //Number of Descision and Question load from file
-    public void decisionQuestion(String TextFileQ) {  
+    public void decisionQuestion(String TextFileQ) {
         try {
             BufferedReader reader = new BufferedReader(new FileReader(TextFileQ));
             String f;
@@ -49,7 +49,7 @@ public class Decision {
         } catch (IOException ex) {
         }
     }
-    
+
     //Clear decisionList then add new file to decisionList
     public void decisionAnswers(String TextFileA) {
         CSI2999Project.decisionList.clear();
@@ -64,10 +64,11 @@ public class Decision {
         } catch (FileNotFoundException ex) {
         }
     }
-    
-    public void decisionStoryText(String TextFileST){
+
+    public void decisionStoryText(String TextFileST) {
         try {
-            BufferedReader reader = new BufferedReader(new FileReader(TextFileST));     // read story text from given file
+            BufferedReader reader = new BufferedReader(new FileReader(TextFileST));
+            // read story text from given file
             String f;
             while ((f = reader.readLine()) != null) {
                 CSI2999Project.storyText = f;

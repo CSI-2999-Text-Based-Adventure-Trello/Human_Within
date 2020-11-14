@@ -55,12 +55,7 @@ public class gameGUIController implements Initializable {
 
     @FXML
     private void contButtonAction(ActionEvent event) throws IOException {
-        txtOutput.setText(CSI2999Project.question);
-        String textFileQ;
-        textFileQ = "./src//Story/" + CSI2999Project.question;
-        dec.decisionQuestion(textFileQ);
         labelButtons();
-        sG.saveGameFile(CSI2999Project.decisionList.get(number).getTextfile().trim());
     }
 
     @FXML
@@ -96,22 +91,20 @@ public class gameGUIController implements Initializable {
     }
 
     public void choiceMaker(int number) {
+        hideButtons();
         sDM.fileManagement(number);
         txtOutput.setText(CSI2999Project.storyText);
-        hideButtons();
+        sG.saveGameFile(CSI2999Project.decisionList.get(number).getTextfile().trim());
+        txtOutput.setText(CSI2999Project.question);
+        String textFileQ;
+        textFileQ = "./src//Story/" + CSI2999Project.question;
+        dec.decisionQuestion(textFileQ);
     }
 
     @FXML
     private void handleEndButton1(ActionEvent event) {
         Stage thisStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         sBS.switchScence("/endScreen/endScreen2.fxml", thisStage);
-    }
-
-    public void choiceMakerBeta(int number) {
-        sDM.fileManagement(number);
-        txtOutput.setText(CSI2999Project.question);
-        labelButtons();
-        sG.saveGameFile(CSI2999Project.decisionList.get(number).getTextfile().trim());
     }
 
     public void labelButtons() {
@@ -157,18 +150,21 @@ public class gameGUIController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        //Open savedGame and then read saveGame.txt file
-        String tempString = CSI2999Project.player + "\\saveGame.txt";
-        File file = new File(tempString);
-        try {
-            lSGF.loadSaveGame(CSI2999Project.fileLocation);
-        } catch (IOException ex) {
-            Logger.getLogger(gameGUIController.class.getName()).log(Level.SEVERE, null, ex);
+        if (CSI2999Project.newGame = true) {
+            //Open savedGame and then read saveGame.txt file
+            String tempString = CSI2999Project.player + "\\saveGame.txt";
+            File file = new File(tempString);
+            try {
+                lSGF.loadSaveGame(CSI2999Project.fileLocation);
+            } catch (IOException ex) {
+                Logger.getLogger(gameGUIController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            sDM.fileManagement(CSI2999Project.fileList.get(CSI2999Project.fileList.size() - 1));
+            CSI2999Project.newGame = false;
         }
-        sDM.fileManagement(CSI2999Project.fileList.get(CSI2999Project.fileList.size() - 1));
-        CSI2999Project.newGame = 0;
         txtOutput.setText(CSI2999Project.question);
-        labelButtons();
-        //hideButtons();
+        if (CSI2999Project.hideText = true) {
+            labelButtons();
+        }
     }
 }
