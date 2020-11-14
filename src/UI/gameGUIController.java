@@ -152,7 +152,7 @@ public class gameGUIController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         if (CSI2999Project.newGame = true) {
             //Open savedGame and then read saveGame.txt file
-            String tempString = CSI2999Project.player + "\\saveGame.txt";
+            String tempString = CSI2999Project.fileLocation + "\\" + CSI2999Project.player + "\\saveGame.txt";
             File file = new File(tempString);
             try {
                 lSGF.loadSaveGame(CSI2999Project.fileLocation);
@@ -165,6 +165,7 @@ public class gameGUIController implements Initializable {
         txtOutput.setText(CSI2999Project.question);
         if (CSI2999Project.hideText = true) {
             labelButtons();
+            CSI2999Project.hideText = false;
         }
     }
 }

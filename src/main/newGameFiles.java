@@ -23,7 +23,7 @@ public class newGameFiles {
         File fileLedger = new File(file + "saveGame.txt");
         FileWriter fw = new FileWriter(fileLedger);
         PrintWriter pw = new PrintWriter(fw);
-        pw.println("0001");
+        pw.print("0001");
         pw.close();
     }
 

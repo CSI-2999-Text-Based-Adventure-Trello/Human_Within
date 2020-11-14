@@ -15,11 +15,11 @@ public class storyDesisonManagement {
         String textFileQ, textFileA, textFileST;
         //Add Q.txt or A.txt to open 0001Q.txt & 0001A.txt
         textFileQ = location + CSI2999Project.decisionList.get(picked).getTextfile().trim() + question;
-            dec.decisionQuestion(textFileQ);
+        dec.decisionQuestion(textFileQ);
         textFileST = location + CSI2999Project.decisionList.get(picked).getTextfile().trim() + storyText;   //added storyText files
-            dec.decisionStoryText(textFileST);
+        dec.decisionStoryText(textFileST);
         textFileA = location + CSI2999Project.decisionList.get(picked).getTextfile().trim() + answer;
-            dec.decisionAnswers(textFileA);
+        dec.decisionAnswers(textFileA);
     }
 
     //This is used when the decisionList is clear
@@ -28,10 +28,10 @@ public class storyDesisonManagement {
         String textFileQ, textFileA, textFileST;
         //Add Q.txt or A.txt to open 0001Q.txt & 0001A.txt
         textFileQ = location + start + question;
-            dec.decisionQuestion(textFileQ);
+        dec.decisionQuestion(textFileQ);
         textFileST = location + start + storyText;
-            dec.decisionStoryText(textFileST);
+        dec.decisionStoryText(textFileST);
         textFileA = location + start + answer;
-            dec.decisionAnswers(textFileA);
+        dec.decisionAnswers(textFileA);
     }
 }

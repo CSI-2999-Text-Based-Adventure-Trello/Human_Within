@@ -53,7 +53,7 @@ public class saveMenuController implements Initializable {
         Stage thisStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         if (!(nameTextField.getText().isEmpty())) {
             String tempString = CSI2999Project.fileLocation + "\\" + nameTextField.getText();
-            CSI2999Project.player = tempString;
+            CSI2999Project.player = nameTextField.getText();
             File temp = new File(tempString);
             nGF.createFileName(temp);
             CSI2999Project.savedGame = tempString;
