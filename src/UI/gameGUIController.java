@@ -56,14 +56,10 @@ public class gameGUIController implements Initializable {
     @FXML
     private void contButtonAction(ActionEvent event) throws IOException {
         labelButtons();
-    }
-
-    @FXML
-    private void hideButtons() {         // hide buttons when story text shown
-        choiceA.setVisible(false);
-        choiceB.setVisible(false);
-        choiceC.setVisible(false);
-        choiceD.setVisible(false);
+        txtOutput.setText(CSI2999Project.question);
+        String textFileQ;
+        textFileQ = "./src//Story/" + CSI2999Project.question;
+        dec.decisionQuestion(textFileQ);
     }
 
     @FXML
@@ -91,14 +87,13 @@ public class gameGUIController implements Initializable {
     }
 
     public void choiceMaker(int number) {
-        hideButtons();
+        choiceA.setVisible(false);
+        choiceB.setVisible(false);
+        choiceC.setVisible(false);
+        choiceD.setVisible(false);
         sDM.fileManagement(number);
         txtOutput.setText(CSI2999Project.storyText);
         sG.saveGameFile(CSI2999Project.decisionList.get(number).getTextfile().trim());
-        txtOutput.setText(CSI2999Project.question);
-        String textFileQ;
-        textFileQ = "./src//Story/" + CSI2999Project.question;
-        dec.decisionQuestion(textFileQ);
     }
 
     @FXML
