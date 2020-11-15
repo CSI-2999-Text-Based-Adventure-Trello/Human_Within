@@ -86,11 +86,16 @@ public class gameGUIController implements Initializable {
         choiceMaker(number);
     }
 
-    public void choiceMaker(int number) {
+    @FXML
+    private void hideButtons() {         // hide buttons when story text shown
         choiceA.setVisible(false);
         choiceB.setVisible(false);
         choiceC.setVisible(false);
         choiceD.setVisible(false);
+    }
+    
+    public void choiceMaker(int number) {
+        hideButtons();
         sDM.fileManagement(number);
         txtOutput.setText(CSI2999Project.storyText);
         sG.saveGameFile(CSI2999Project.decisionList.get(number).getTextfile().trim());
@@ -156,11 +161,8 @@ public class gameGUIController implements Initializable {
             }
             sDM.fileManagement(CSI2999Project.fileList.get(CSI2999Project.fileList.size() - 1));
             CSI2999Project.newGame = false;
+            hideButtons();
         }
-        txtOutput.setText(CSI2999Project.question);
-        if (CSI2999Project.hideText = true) {
-            labelButtons();
-            CSI2999Project.hideText = false;
-        }
+        txtOutput.setText(CSI2999Project.storyText);
     }
 }
