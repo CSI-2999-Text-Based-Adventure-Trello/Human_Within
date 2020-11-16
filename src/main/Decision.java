@@ -43,6 +43,9 @@ public class Decision {
                 if (count == 2) {
                     CSI2999Project.question = f;
                 }
+                if (count == 3) {
+                    CSI2999Project.storyText = f;
+                }
                 count++;
             }
         } catch (FileNotFoundException ex) {
@@ -62,19 +65,6 @@ public class Decision {
                 decisionList.add(temp);
             }
         } catch (FileNotFoundException ex) {
-        }
-    }
-
-    public void decisionStoryText(String TextFileST) {
-        try {
-            BufferedReader reader = new BufferedReader(new FileReader(TextFileST));
-            // read story text from given file
-            String f;
-            while ((f = reader.readLine()) != null) {
-                CSI2999Project.storyText = f;
-            }
-        } catch (FileNotFoundException ex) {
-        } catch (IOException ex) {
         }
     }
 }
