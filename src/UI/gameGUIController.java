@@ -35,6 +35,7 @@ public class gameGUIController implements Initializable {
     @FXML
     private TextArea txtOutput;
     private int number;
+    
     switchBetweenScenes sBS = new switchBetweenScenes();
     Decision dec = new Decision();
     storyDesisonManagement sDM = new storyDesisonManagement();
@@ -60,6 +61,7 @@ public class gameGUIController implements Initializable {
         String textFileQ;
         textFileQ = "./src//Story/" + CSI2999Project.question;
         dec.decisionQuestion(textFileQ);
+        CSI2999Project.hideButtons = false;
     }
 
     @FXML
@@ -92,6 +94,7 @@ public class gameGUIController implements Initializable {
         choiceB.setVisible(false);
         choiceC.setVisible(false);
         choiceD.setVisible(false);
+        CSI2999Project.hideButtons = true;
     }
     
     public void choiceMaker(int number) {
@@ -150,7 +153,8 @@ public class gameGUIController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        if (CSI2999Project.newGame = true) {
+        if (CSI2999Project.newGame == true) {
+            System.out.println("123");
             //Open savedGame and then read saveGame.txt file
             String tempString = CSI2999Project.fileLocation + "\\" + CSI2999Project.player + "\\saveGame.txt";
             File file = new File(tempString);
@@ -161,8 +165,13 @@ public class gameGUIController implements Initializable {
             }
             sDM.fileManagement(CSI2999Project.fileList.get(CSI2999Project.fileList.size() - 1));
             CSI2999Project.newGame = false;
-            hideButtons();
         }
-        txtOutput.setText(CSI2999Project.storyText);
+        if (CSI2999Project.hideButtons == true) {
+            hideButtons();
+            txtOutput.setText(CSI2999Project.storyText);
+        }  else {
+            labelButtons();
+            txtOutput.setText(CSI2999Project.question);
+        }
     }
 }
