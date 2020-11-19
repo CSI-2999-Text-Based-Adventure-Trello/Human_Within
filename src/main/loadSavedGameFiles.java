@@ -13,7 +13,7 @@ public class loadSavedGameFiles {
     File[] folderArray = Folder.listFiles();
 
     //Check it savedGame folder exist if not it creats it
-    public void load(ListView<File> listView) {
+    public void load(ListView<String> listView) {
         ObservableList list = FXCollections.observableArrayList();
         if (!Folder.exists()) {
             Folder.mkdir();
@@ -21,7 +21,7 @@ public class loadSavedGameFiles {
         } else {
             for (File folders : folderArray) {
                 CSI2999Project.player = folders.getName();
-                list.add(folders);
+                list.add(folders.getName());
             }
             listView.getItems().addAll(list);
             listView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
