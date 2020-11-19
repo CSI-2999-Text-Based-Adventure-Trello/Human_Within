@@ -1,2 +1,3 @@
 0
+Game over!
 You reach for the gum and the seemingly calm dog snaps at your hand, instantly killing you. [Game over screen]
