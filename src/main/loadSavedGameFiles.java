@@ -4,7 +4,6 @@ import java.io.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.ListView;
-import javafx.scene.control.SelectionMode;
 
 //This class load the save Folder from a folder.
 public class loadSavedGameFiles {
@@ -27,17 +26,33 @@ public class loadSavedGameFiles {
 
     //load different files from users save game
     public void loadSaveGame(String fileName) throws FileNotFoundException, IOException {
+        File file = new File(fileName);
+        saveGame(fileName + "\\saveGame.txt");
+        //inventory(fileName + "\\Inventory.txt"); //Not being used right now
+        
+    }
+
+    //Put the save game into an array
+    public void saveGame(String fileName) {
+        File file = new File(fileName);
         try {
-            File file = new File(fileName);
-            File[] fileArray = file.listFiles();
-            for (File files : fileArray) {
-                if (files.toString().contains("saveGame.txt")) {
-                    BufferedReader reader = new BufferedReader(new FileReader(files.toString()));
-                    String fileList;
-                    while ((fileList = reader.readLine()) != null) {
-                        CSI2999Project.fileList.add(fileList);
-                    }
-                }
+            BufferedReader reader = new BufferedReader(new FileReader(fileName));
+            String fileList;
+            while ((fileList = reader.readLine()) != null) {
+                CSI2999Project.fileList.add(fileList);
+            }
+        } catch (IOException e) {
+        }
+    }
+
+    //Put the inventory into an array //Not being used right now
+    public void inventory(String fileName) {
+        File file = new File(fileName + "\\Inventory.txt");
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(fileName));
+            String fileList;
+            while ((fileList = reader.readLine()) != null) {
+                //CSI2999Project.inventory.add(fileList);
             }
         } catch (IOException e) {
         }
