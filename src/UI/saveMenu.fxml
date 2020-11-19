@@ -14,7 +14,7 @@
       <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
    </padding>
    <children>
-      <ListView fx:id="listView" prefHeight="478.0" prefWidth="728.0" style="-fx-background-color: black; -fx-border-color: white; -fx-text-fill: white;" />
+      <ListView fx:id="listViewBeta" prefHeight="478.0" prefWidth="728.0" style="-fx-background-color: black; -fx-border-color: white; -fx-text-fill: white;" />
       <HBox alignment="CENTER" prefHeight="72.0" prefWidth="580.0" spacing="10.0">
          <children>
             <Button fx:id="newGame" mnemonicParsing="false" onAction="#newGameButtonAction" prefHeight="55.0" prefWidth="155.0" style="-fx-background-color: black; -fx-border-color: white;" text="New Game" textFill="WHITE">
