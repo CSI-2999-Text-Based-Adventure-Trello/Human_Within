@@ -19,11 +19,9 @@ public class loadSavedGameFiles {
             Folder.mkdir();
         } else {
             for (File folders : folderArray) {
-                CSI2999Project.player = folders.getName();
                 list.add(folders.getName());
             }
             listView.getItems().addAll(list);
-            listView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
         }
     }
 

@@ -41,9 +41,9 @@ public class saveMenuController implements Initializable {
         //This get the save game the user selected then close the saveMenu.fxml
         Stage thisStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         try {
+            CSI2999Project.player = listViewBeta.getSelectionModel().getSelectedItem();
             CSI2999Project.savedGame = (CSI2999Project.fileLocation + "\\"
-                    + listViewBeta.getSelectionModel().getSelectedItem());
-            System.out.println(CSI2999Project.savedGame);
+                    + CSI2999Project.player);
             thisStage.close();
         } catch (Exception e) {
         }
