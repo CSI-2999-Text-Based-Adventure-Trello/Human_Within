@@ -14,8 +14,6 @@ public class newGameFiles {
             String tempString = Folder.toString() + "\\";
             saveGameTXT(tempString);
             InventoryTXT(tempString);
-        } else {
-            System.out.println("File Does not Exist");
         }
     }
 

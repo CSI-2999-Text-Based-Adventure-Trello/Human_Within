@@ -17,7 +17,6 @@ public class switchBetweenScenes {
             thisStage.setScene(gameGUI);
             thisStage.show();
         } catch (IOException e) {
-            System.out.println("Can't load save window");
         }
     }
 
@@ -32,7 +31,6 @@ public class switchBetweenScenes {
             saveStage.setTitle("Pick your save game file");
             saveStage.showAndWait();
         } catch (IOException e) {
-            System.out.println("Can't load save window");
         }
     }
 }

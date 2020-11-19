@@ -35,7 +35,7 @@ public class gameGUIController implements Initializable {
     @FXML
     private TextArea txtOutput;
     private int number;
-    
+
     switchBetweenScenes sBS = new switchBetweenScenes();
     Decision dec = new Decision();
     storyDesisonManagement sDM = new storyDesisonManagement();
@@ -96,7 +96,7 @@ public class gameGUIController implements Initializable {
         choiceD.setVisible(false);
         CSI2999Project.hideButtons = true;
     }
-    
+
     public void choiceMaker(int number) {
         hideButtons();
         sDM.fileManagement(number);
@@ -154,7 +154,6 @@ public class gameGUIController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         if (CSI2999Project.newGame == true) {
-            System.out.println("123");
             //Open savedGame and then read saveGame.txt file
             String tempString = CSI2999Project.fileLocation + "\\" + CSI2999Project.player + "\\saveGame.txt";
             File file = new File(tempString);
@@ -169,7 +168,7 @@ public class gameGUIController implements Initializable {
         if (CSI2999Project.hideButtons == true) {
             hideButtons();
             txtOutput.setText(CSI2999Project.storyText);
-        }  else {
+        } else {
             labelButtons();
             txtOutput.setText(CSI2999Project.question);
         }

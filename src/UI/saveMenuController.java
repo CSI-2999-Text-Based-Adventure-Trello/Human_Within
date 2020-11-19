@@ -46,7 +46,6 @@ public class saveMenuController implements Initializable {
             System.out.println(CSI2999Project.savedGame);
             thisStage.close();
         } catch (Exception e) {
-            System.out.println("ERROR!!");
         }
     }
 

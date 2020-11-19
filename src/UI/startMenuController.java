@@ -27,11 +27,8 @@ public class startMenuController implements Initializable {
             if (!(CSI2999Project.savedGame == null)) {
                 load.loadSaveGame(CSI2999Project.savedGame);
                 sBS.switchScence("/UI/gameGUI.fxml", thisStage);
-            } else {
-                System.out.println("ERROR!");
             }
-        } catch (IOException e) {            
-            System.out.println("ERROR!");
+        } catch (IOException e) {
         }
     }
 

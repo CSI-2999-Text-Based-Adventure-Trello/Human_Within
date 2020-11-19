@@ -32,6 +32,8 @@ public class Decision {
 
     //Number of Descision and Question load from file
     public void decisionQuestion(String TextFileQ) {
+        CSI2999Project.question = ("ERROR!! question is missing!");
+        CSI2999Project.question = ("ERROR!! storyText is missing!");
         try {
             BufferedReader reader = new BufferedReader(new FileReader(TextFileQ));
             String f;

@@ -17,7 +17,6 @@ public class loadSavedGameFiles {
         ObservableList list = FXCollections.observableArrayList();
         if (!Folder.exists()) {
             Folder.mkdir();
-            System.out.println("File created");
         } else {
             for (File folders : folderArray) {
                 CSI2999Project.player = folders.getName();
