@@ -1,6 +1,6 @@
-0002
-Red
-0002
-Blue
-0002
-Green
+0005
+Yes
+0005
+I'm not sure
+0005
+(you don't really have a choice)
