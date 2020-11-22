@@ -1,0 +1,9 @@
+
+Ask someone for help
+bad
+1006
+Sneak into a hotel and hide
+false
+
+Turn yourself in to the police
+bad

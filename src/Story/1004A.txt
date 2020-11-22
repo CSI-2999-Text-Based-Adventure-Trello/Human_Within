@@ -1,0 +1,9 @@
+1005
+Steal from someones house
+false
+1005
+Steal from clothing place
+false
+1005
+Ask someone
+false

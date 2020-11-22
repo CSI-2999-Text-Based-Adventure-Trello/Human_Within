@@ -1,0 +1,9 @@
+1002
+Inside the opened locked door.
+false
+
+behind the door
+bad
+
+under the table
+bad
