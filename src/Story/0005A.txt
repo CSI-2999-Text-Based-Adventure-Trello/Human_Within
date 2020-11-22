@@ -1,6 +1,5 @@
-0005
-Sleep another night
+0007
+Stay one more night in the cryo-pod. Its metal walls and weird tubes look cozy.
 false
-0006
-"Time to explore this world"
-false
+0008
+"I'm not getting back in their, I never really enjoyed being a human popsicle"

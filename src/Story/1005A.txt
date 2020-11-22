@@ -1,0 +1,9 @@
+1999
+Ask someone for help
+bad
+1006
+Sneak into a hotel and hide
+false
+1999
+Turn yourself in to the police
+bad

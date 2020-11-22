@@ -1,0 +1,9 @@
+1003
+Do you search for food?
+false
+1999
+Do you search for a place to sleep?
+bad
+1999
+Do you explore town?
+bad
