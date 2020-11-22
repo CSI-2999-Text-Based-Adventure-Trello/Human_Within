@@ -1,4 +1,6 @@
 0005
 Sleep another night
+false
 0006
 "Time to explore this world"
+false

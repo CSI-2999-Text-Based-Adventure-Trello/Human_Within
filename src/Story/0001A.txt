@@ -1,6 +1,9 @@
 0002
 Red
+false
 0002
 Blue
+false
 0002
 Green
+false

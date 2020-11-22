@@ -1,8 +1,12 @@
 0005
 Your front lawn.
+false
 0005
 Your car in the driveway.
+false
 0005
 Too sunny out, can't see shit
+false
 0005
 Your neighbor watering their flowers.
+false

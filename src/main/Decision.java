@@ -12,10 +12,12 @@ public class Decision {
 
     private String textfile;
     private String Answer;
+    private String endGame;
 
-    public Decision(String textfile, String Answer) {
+    public Decision(String textfile, String Answer, String endGame) {
         this.textfile = textfile;
         this.Answer = Answer;
+        this.endGame = endGame;
     }
 
     public Decision() {
@@ -30,6 +32,10 @@ public class Decision {
         return Answer;
     }
 
+    public String getEndGame() {
+        return endGame;
+    }
+    
     //Number of Descision and Question load from file
     public void decisionQuestion(String TextFileQ) {
         try {
@@ -59,11 +65,12 @@ public class Decision {
     public void decisionAnswers(String TextFileA) {
         CSI2999Project.decisionList.clear();
         try (Scanner fileIn = new Scanner(new File(TextFileA))) {
-            String textfile, Answer;
+            String textfile, Answer, endGame;
             while (fileIn.hasNext()) {
                 textfile = fileIn.nextLine();
                 Answer = fileIn.nextLine();
-                Decision temp = new Decision(textfile, Answer);
+                endGame = fileIn.nextLine();
+                Decision temp = new Decision(textfile, Answer, endGame);
                 decisionList.add(temp);
             }
         } catch (FileNotFoundException ex) {
