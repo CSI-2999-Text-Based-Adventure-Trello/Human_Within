@@ -66,7 +66,7 @@ public class gameGUIController implements Initializable {
                     txtOutput.setText(CSI2999Project.storyText);
                     sG.saveGameFile(CSI2999Project.decisionList.get(number).getTextfile().trim());
                     labelButtons();
-                    txtOutput.setText(CSI2999Project.question);
+                    txtOutput.setText(txtOutput.getText() + "\n" + CSI2999Project.question);
                     String textFileQ;
                     textFileQ = "./src//Story/" + CSI2999Project.question;
                     dec.decisionQuestion(textFileQ);
