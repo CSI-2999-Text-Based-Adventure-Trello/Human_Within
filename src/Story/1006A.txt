@@ -1,9 +1,9 @@
-
+1999
 Do you search for food?
 bad
 1007
 Do you search for a place to sleep?
 false
-
+1999
 Do you explore town?
-false
+bad

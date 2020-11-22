@@ -1,9 +1,9 @@
 1002
 Inside the opened locked door.
 false
-
+1999
 behind the door
 bad
-
+1999
 under the table
 bad
