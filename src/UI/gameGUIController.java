@@ -62,15 +62,21 @@ public class gameGUIController implements Initializable {
             switch (CSI2999Project.decisionList.get(number).getEndGame()) {
                 case "false":
                 case "False":
-                    sDM.fileManagement(number);
-                    txtOutput.setText(CSI2999Project.storyText);
-                    sG.saveGameFile(CSI2999Project.decisionList.get(number).getTextfile().trim());
-                    labelButtons();
-                    txtOutput.setText(txtOutput.getText() + "\n" + CSI2999Project.question);
-                    String textFileQ;
-                    textFileQ = "./src//Story/" + CSI2999Project.question;
-                    dec.decisionQuestion(textFileQ);
-                    CSI2999Project.hideButtons = false;
+                    if (CSI2999Project.newGame == true) {
+                        labelButtons();
+                        CSI2999Project.newGame = false;
+                    } else {
+                        sDM.fileManagement(number);
+                        txtOutput.setText(CSI2999Project.storyText);
+                        sG.saveGameFile(CSI2999Project.decisionList.get(number).getTextfile().trim());
+                        labelButtons();
+                        txtOutput.setText(txtOutput.getText() + "\n" + CSI2999Project.question);
+                        String textFileQ;
+                        textFileQ = "./src//Story/" + CSI2999Project.question;
+                        dec.decisionQuestion(textFileQ);
+                        CSI2999Project.hideButtons = false;
+                    }
+
                     break;
                 case "bad":
                 case "Bad":
@@ -190,14 +196,12 @@ public class gameGUIController implements Initializable {
                 Logger.getLogger(gameGUIController.class.getName()).log(Level.SEVERE, null, ex);
             }
             sDM.fileManagement(CSI2999Project.fileList.get(CSI2999Project.fileList.size() - 1));
-            CSI2999Project.newGame = false;
         }
         if (CSI2999Project.hideButtons == true) {
             hideButtons();
-            txtOutput.setText(CSI2999Project.storyText);
+            txtOutput.setText(CSI2999Project.question + "\n" + CSI2999Project.storyText);
         } else {
             labelButtons();
-            txtOutput.setText(CSI2999Project.question);
         }
     }
 }
