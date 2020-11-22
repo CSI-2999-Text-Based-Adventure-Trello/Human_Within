@@ -76,7 +76,6 @@ public class gameGUIController implements Initializable {
                         dec.decisionQuestion(textFileQ);
                         CSI2999Project.hideButtons = false;
                     }
-
                     break;
                 case "bad":
                 case "Bad":

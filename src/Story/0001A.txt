@@ -1,6 +1,9 @@
 0005
 Yes
+false
 0005
 I'm not sure
+false
 0005
 (you don't really have a choice)
+false
