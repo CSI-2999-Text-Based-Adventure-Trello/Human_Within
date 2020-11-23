@@ -1,0 +1,12 @@
+1011
+I'm sorry I wasn't trying to be a burden.
+false
+1011
+Look buddy, I've had a long day I just need a place to sleep.
+false
+1010
+I know how to speak basic.
+false
+1999
+I'm not a neo-human.
+bad

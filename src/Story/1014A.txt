@@ -1,0 +1,12 @@
+1015
+Where can I find food?
+false
+1016
+Where can I find Information?
+false
+1017
+What is this place?
+false
+1018
+What’s going on in the world?
+false
