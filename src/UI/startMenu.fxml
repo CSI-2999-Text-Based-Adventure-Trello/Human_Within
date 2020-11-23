@@ -22,7 +22,7 @@
                   <Font name="Lucida Sans Typewriter Regular" size="14.0" />
                </font>
             </Button>
-            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="102.0" layoutY="565.0" mnemonicParsing="false" onAction="#infoButtonAction" prefHeight="25.0" prefWidth="212.0" style="-fx-background-color: black; -fx-border-color: white;" text="Info" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="infoButton" alignment="CENTER" contentDisplay="CENTER" layoutX="102.0" layoutY="565.0" mnemonicParsing="false" onAction="#infoButtonAction" prefHeight="25.0" prefWidth="212.0" style="-fx-background-color: black; -fx-border-color: white;" text="How to Play" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Lucida Sans Typewriter Regular" size="14.0" />
                </font>
