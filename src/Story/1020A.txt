@@ -1,0 +1,12 @@
+1021
+What do you think this looks like?
+false
+1021
+I’ve been looking for food… I found some....
+false
+1021
+I had some trouble getting this fruit down. I’m sorry about the mess.
+false
+1021
+Pretend that you don’t understand what he is saying.
+false

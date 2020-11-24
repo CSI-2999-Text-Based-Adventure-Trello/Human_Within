@@ -1,0 +1,9 @@
+1020
+Approach the entrance
+false
+1020
+Talk to the android
+false
+1020
+Approach the info board
+false
