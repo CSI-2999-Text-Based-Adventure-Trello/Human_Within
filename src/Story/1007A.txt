@@ -2,7 +2,7 @@
 Sorry, come again?
 false
 1008
-Look, had a long day I don't need anyone making weird noises at me.
+Look, I've had a long day. I don't need anyone making weird noises.
 false
 1008
 Is that how you greet all your guests?
