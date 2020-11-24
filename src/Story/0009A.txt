@@ -1,4 +1,6 @@
 0007
 Go to the surface
+false
 0011
 Leave this abandoned medical center
+false
