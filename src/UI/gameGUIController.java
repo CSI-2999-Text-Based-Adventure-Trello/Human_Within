@@ -19,6 +19,8 @@ import main.storyDesisonManagement;
 import java.io.File;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
 public class gameGUIController implements Initializable {
 
@@ -34,6 +36,8 @@ public class gameGUIController implements Initializable {
     private Button choiceD;
     @FXML
     private TextArea txtOutput;
+    @FXML
+    private ImageView character;
     private int number;
     private Stage event;
 
@@ -75,6 +79,7 @@ public class gameGUIController implements Initializable {
                         textFileQ = "./src//Story/" + CSI2999Project.question;
                         dec.decisionQuestion(textFileQ);
                         CSI2999Project.hideButtons = false;
+                        changeImage(CSI2999Project.talker);
                     }
                     break;
                 case "bad":
@@ -183,6 +188,11 @@ public class gameGUIController implements Initializable {
         }
     }
 
+    public void changeImage(String pic) {
+        Image image = new Image("/images/" + pic);
+        character.setImage(image);
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         if (CSI2999Project.newGame == true) {
@@ -202,5 +212,6 @@ public class gameGUIController implements Initializable {
         } else {
             labelButtons();
         }
+        changeImage(CSI2999Project.talker);
     }
 }

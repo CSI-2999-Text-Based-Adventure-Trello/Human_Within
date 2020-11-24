@@ -35,7 +35,7 @@ public class Decision {
     public String getEndGame() {
         return endGame;
     }
-    
+
     //Number of Descision and Question load from file
     public void decisionQuestion(String TextFileQ) {
         try {
@@ -49,10 +49,19 @@ public class Decision {
                 if (count == 2) {
                     CSI2999Project.question = f;
                 }
-                if (count == 3 && (!(f == CSI2999Project.question))) {
-                    CSI2999Project.storyText = f;
-                } else {
-                    CSI2999Project.storyText = "Missing the Story Text!";
+                if (count == 3) {
+                    if (!(f.equals(CSI2999Project.question))) {
+                        CSI2999Project.storyText = f;
+                    } else {
+                        CSI2999Project.storyText = "Missing the Story Text!";
+                    }
+                }
+                if (count == 4) {
+                    if (!(f.equals(CSI2999Project.storyText))) {
+                        CSI2999Project.talker = f + ".png";
+                    } else {
+                        CSI2999Project.talker = "missing1" + ".png";
+                    }
                 }
                 count++;
             }
