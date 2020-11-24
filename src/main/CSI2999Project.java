@@ -20,6 +20,8 @@ public class CSI2999Project extends Application {
     public static boolean hideButtons;
     public static String fileLocation = ".\\savedGames";
     public static String player;
+    public static String talker = "missing2";
+    public static int number;
 
     @Override
     public void start(Stage stage) throws Exception {
