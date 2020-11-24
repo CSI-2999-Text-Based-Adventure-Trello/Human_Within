@@ -61,6 +61,7 @@ public class gameGUIController implements Initializable {
 
     @FXML
     private void contButtonAction(ActionEvent event) throws IOException {
+        System.out.println(CSI2999Project.decisionList.get(CSI2999Project.number).getTextfile());
         Stage thisStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         switch (CSI2999Project.decisionList.get(CSI2999Project.number).getEndGame()) {
             case "false":
