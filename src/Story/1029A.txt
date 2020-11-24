@@ -1,0 +1,6 @@
+1030
+Get you a fake serial # and try and pass you as an android
+false
+1032
+Get you back to the Astra industries facility. There you might find more answers 
+false
