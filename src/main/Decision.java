@@ -60,7 +60,7 @@ public class Decision {
                     if (!(f.equals(CSI2999Project.storyText))) {
                         CSI2999Project.talker = f + ".png";
                     } else {
-                        CSI2999Project.talker = "missing1" + ".png";
+                        CSI2999Project.talker = "sprite1" + ".png";
                     }
                 }
                 count++;
