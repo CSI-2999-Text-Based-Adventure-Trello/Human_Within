@@ -1,2 +1,4 @@
 2
-You used the stairs which lead you to the main data core, and you figure out that there is nothing, but pitch dark hallway with no sound of any life form. You continue searching the data core and were unable to find anything that seemed to prove what had actually happened over here, so eventually you come across an elevator. 
+You continue searching the data core and were unable to find anything that seemed to prove what had actually happened over here, so eventually you come across an elevator. 
+You used the stairs which lead you to the main data core, and you figure out that there is nothing, but pitch dark hallway with no sound of any life form. 
+sprite1
