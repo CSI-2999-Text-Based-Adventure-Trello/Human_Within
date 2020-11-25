@@ -26,17 +26,16 @@ public class loadSavedGameFiles {
 
     //load different files from users save game
     public void loadSaveGame(String fileName) throws FileNotFoundException, IOException {
-        File file = new File(fileName);
-        saveGame(fileName + "\\saveGame.txt");
+        saveGame(fileName);
         //inventory(fileName + "\\Inventory.txt"); //Not being used right now
         
     }
 
     //Put the save game into an array
     public void saveGame(String fileName) {
-        File file = new File(fileName);
+        File file = new File(fileName + "\\saveGame.txt");
         try {
-            BufferedReader reader = new BufferedReader(new FileReader(fileName));
+            BufferedReader reader = new BufferedReader(new FileReader(file));
             String fileList;
             while ((fileList = reader.readLine()) != null) {
                 CSI2999Project.fileList.add(fileList);
@@ -49,7 +48,7 @@ public class loadSavedGameFiles {
     public void inventory(String fileName) {
         File file = new File(fileName + "\\Inventory.txt");
         try {
-            BufferedReader reader = new BufferedReader(new FileReader(fileName));
+            BufferedReader reader = new BufferedReader(new FileReader(file));
             String fileList;
             while ((fileList = reader.readLine()) != null) {
                 //CSI2999Project.inventory.add(fileList);

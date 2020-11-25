@@ -6,7 +6,7 @@ public class storyDesisonManagement {
 
     switchBetweenScenes sBS = new switchBetweenScenes();
     Decision dec = new Decision();
-    String location = "./src//Story/", question = "Q.txt", answer = "A.txt";
+    String location = "./src/Story/", question = "Q.txt", answer = "A.txt";
 
     //This method is use for nonstarter 
     //when the decisionList has the picked in it
