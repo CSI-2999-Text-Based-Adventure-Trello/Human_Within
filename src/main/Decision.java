@@ -38,30 +38,29 @@ public class Decision {
 
     //Number of Descision and Question load from file
     public void decisionQuestion(String TextFileQ) {
+        CSI2999Project.talker = "missing1.png";
         try {
             BufferedReader reader = new BufferedReader(new FileReader(TextFileQ));
             String f;
             int count = 1;
             while ((f = reader.readLine()) != null) {
-                if (count == 1) {
-                    CSI2999Project.numberOfDescision = Integer.parseInt(f);
-                }
-                if (count == 2) {
-                    CSI2999Project.question = f;
-                }
-                if (count == 3) {
-                    if (!(f.equals(CSI2999Project.question))) {
-                        CSI2999Project.storyText = f;
-                    } else {
-                        CSI2999Project.storyText = "Missing the Story Text!";
-                    }
-                }
-                if (count == 4) {
-                    if (!(f.equals(CSI2999Project.storyText))) {
+                switch (count) {
+                    case 1:
+                        CSI2999Project.numberOfDescision = Integer.parseInt(f);
+                        break;
+                    case 2:
+                        CSI2999Project.question = f;
+                        break;
+                    case 3:
+                        if (!(f.equals(CSI2999Project.question))) {
+                            CSI2999Project.storyText = f;
+                        } else {
+                            CSI2999Project.storyText = "Missing the Story Text!";
+                        }
+                        break;
+                    case 4:
                         CSI2999Project.talker = f + ".png";
-                    } else {
-                        CSI2999Project.talker = "sprite1" + ".png";
-                    }
+                        break;
                 }
                 count++;
             }

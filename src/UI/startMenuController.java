@@ -27,8 +27,9 @@ public class startMenuController implements Initializable {
         CSI2999Project.hideButtons = true;
         sBS.newScence("/UI/saveMenu.fxml");
         try {
-            if (!(CSI2999Project.savedGame == null)) {
-                load.loadSaveGame(CSI2999Project.savedGame);
+            load.loadSaveGame(CSI2999Project.savedGame);
+            if (CSI2999Project.savedGame != null) {
+                //Open savedGame and then read saveGame.txt file
                 sBS.switchScence("/UI/gameGUI.fxml", thisStage);
             }
         } catch (IOException e) {

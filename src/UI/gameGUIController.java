@@ -196,14 +196,6 @@ public class gameGUIController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         if (CSI2999Project.newGame == true) {
-            //Open savedGame and then read saveGame.txt file
-            String tempString = CSI2999Project.fileLocation + "\\" + CSI2999Project.player + "\\saveGame.txt";
-            File file = new File(tempString);
-            try {
-                lSGF.loadSaveGame(CSI2999Project.fileLocation);
-            } catch (IOException ex) {
-                Logger.getLogger(gameGUIController.class.getName()).log(Level.SEVERE, null, ex);
-            }
             sDM.fileManagement(CSI2999Project.fileList.get(CSI2999Project.fileList.size() - 1));
         }
         if (CSI2999Project.hideButtons == true) {
