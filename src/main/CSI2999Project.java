@@ -1,6 +1,5 @@
 package main;
 
-import DecisionMaker.Decision;
 import java.util.ArrayList;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -17,13 +16,16 @@ public class CSI2999Project extends Application {
     public static int numberOfDescision = 0;
     public static String question;
     public static String storyText; //added storyText variable
-    public static int newGame;
-    public static String fileLocation = "C:\\savedGames";
+    public static boolean newGame;
+    public static boolean hideButtons;
+    public static String fileLocation = ".\\savedGames";
     public static String player;
+    public static String talker = "missing2";
+    public static int number;
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/startMenu/startMenu.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/UI/startMenu.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.setTitle(gameNames);

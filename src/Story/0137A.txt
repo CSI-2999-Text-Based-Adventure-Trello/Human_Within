@@ -1,0 +1,6 @@
+0138
+How long have you lived here?
+false
+0139
+Do the cyborg and human get along now?
+false

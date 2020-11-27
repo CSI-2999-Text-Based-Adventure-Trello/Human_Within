@@ -1,7 +1,9 @@
 0103
 Steal from someone's house
+false
 0104
-Steal from clothing place-game over
+Steal from clothing place
+bad
 0105
-Ask someone for clothes-game over
-
+Ask someone for clothes
+bad

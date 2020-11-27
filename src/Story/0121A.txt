@@ -1,0 +1,6 @@
+0122
+leave the area.
+false
+0131
+Wake it up and talk to it
+false

@@ -1,0 +1,9 @@
+0146
+Thank you for taking me in.
+good
+0147
+As a treat I will make todays dinner.
+false
+0148
+I want to help with you with crops.
+false

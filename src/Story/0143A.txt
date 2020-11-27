@@ -1,0 +1,9 @@
+0149
+Cropping.
+good
+0150
+Cleaning
+false
+0151
+Watering and planting seeds
+false

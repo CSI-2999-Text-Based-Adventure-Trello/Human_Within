@@ -1,0 +1,6 @@
+0121
+reach for the memory chip while its asleep.
+false
+0126
+Run and reach the memory chip while its asleep.
+bad

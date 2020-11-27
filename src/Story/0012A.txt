@@ -1,4 +1,6 @@
 0014
-Go to sleep 
+Go to sleep
+false
 0015
 Go explore
+false

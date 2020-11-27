@@ -1,0 +1,12 @@
+0109
+Hide inside closet 
+false
+0110
+Run out the window
+false
+0111
+Hide under the bed
+bad
+0112
+Confront it
+bad
