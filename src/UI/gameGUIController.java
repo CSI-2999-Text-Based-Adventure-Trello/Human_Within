@@ -16,9 +16,6 @@ import main.switchBetweenScenes;
 import main.Decision;
 import main.CSI2999Project;
 import main.storyDesisonManagement;
-import java.io.File;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
@@ -38,7 +35,7 @@ public class gameGUIController implements Initializable {
     private TextArea txtOutput;
     @FXML
     private ImageView character;
-    
+    private int number;
     private Stage event;
 
     switchBetweenScenes sBS = new switchBetweenScenes();
@@ -61,18 +58,18 @@ public class gameGUIController implements Initializable {
 
     @FXML
     private void contButtonAction(ActionEvent event) throws IOException {
-        System.out.println(CSI2999Project.decisionList.get(CSI2999Project.number).getTextfile());
+        System.out.println(CSI2999Project.decisionList.get(number).getTextfile());
         Stage thisStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        switch (CSI2999Project.decisionList.get(CSI2999Project.number).getEndGame()) {
+        switch (CSI2999Project.decisionList.get(number).getEndGame()) {
             case "false":
             case "False":
                 if (CSI2999Project.newGame == true) {
                     labelButtons();
                     CSI2999Project.newGame = false;
                 } else {
-                    sDM.fileManagement(CSI2999Project.number);
+                    sDM.fileManagement(number);
                     labelButtons();
-                    txtOutput.setText(CSI2999Project.question + "\n" + CSI2999Project.storyText);
+                    txtOutput.setText(CSI2999Project.storyText + "\n" + CSI2999Project.question);
                     String textFileQ;
                     textFileQ = "./src//Story/" + CSI2999Project.question;
                     dec.decisionQuestion(textFileQ);
@@ -106,29 +103,29 @@ public class gameGUIController implements Initializable {
 
     @FXML
     private void choiceA(ActionEvent event) {
-        CSI2999Project.number = 0;
-        sG.saveGameFile(CSI2999Project.decisionList.get(CSI2999Project.number).getTextfile().trim());
+        number = 0;
+        sG.saveGameFile(CSI2999Project.decisionList.get(number).getTextfile().trim());
         hideButtons();
     }
 
     @FXML
     private void choiceB(ActionEvent event) {
-        CSI2999Project.number = 1;
-        sG.saveGameFile(CSI2999Project.decisionList.get(CSI2999Project.number).getTextfile().trim());
+        number = 1;
+        sG.saveGameFile(CSI2999Project.decisionList.get(number).getTextfile().trim());
         hideButtons();
     }
 
     @FXML
     private void choiceC(ActionEvent event) {
-        CSI2999Project.number = 2;
-        sG.saveGameFile(CSI2999Project.decisionList.get(CSI2999Project.number).getTextfile().trim());
+        number = 2;
+        sG.saveGameFile(CSI2999Project.decisionList.get(number).getTextfile().trim());
         hideButtons();
     }
 
     @FXML
     private void choiceD(ActionEvent event) {
-        CSI2999Project.number = 3;
-        sG.saveGameFile(CSI2999Project.decisionList.get(CSI2999Project.number).getTextfile().trim());
+        number = 3;
+        sG.saveGameFile(CSI2999Project.decisionList.get(number).getTextfile().trim());
         hideButtons();
     }
 
@@ -195,12 +192,13 @@ public class gameGUIController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        //This only happends once
         if (CSI2999Project.newGame == true) {
             sDM.fileManagement(CSI2999Project.fileList.get(CSI2999Project.fileList.size() - 1));
         }
         if (CSI2999Project.hideButtons == true) {
             hideButtons();
-            txtOutput.setText(CSI2999Project.question + "\n" + CSI2999Project.storyText);
+            txtOutput.setText(CSI2999Project.storyText + "\n" + CSI2999Project.question);
         } else {
             labelButtons();
         }
