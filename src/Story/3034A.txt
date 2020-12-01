@@ -1,0 +1,9 @@
+3016
+Regard the androids coolly. Tell them you are Bill Gates.
+false
+3016
+Show them your watch and say it’s a software manipulation device.
+false
+3020
+Tell them humans are kind and you offer them one chance at redemption.
+false

@@ -1,0 +1,9 @@
+3410
+Slip away from the silver android and head toward the complex.
+false
+3004
+Continue with your new friend toward the mountain.
+false
+3004
+This hunk of metal is rather strange, but follow it anyway.
+false

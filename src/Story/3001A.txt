@@ -1,0 +1,6 @@
+3400
+Try to sneak away.
+false
+3002
+Try again to get the android’s attention.
+false

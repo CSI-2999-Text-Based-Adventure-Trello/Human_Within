@@ -1,0 +1,6 @@
+3011
+Agree to help the androids.
+false
+3010
+Your stomach growls. Tell them you think you'll be leaving.
+false

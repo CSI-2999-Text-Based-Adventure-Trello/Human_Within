@@ -1,0 +1,9 @@
+3005
+What?
+false
+3006
+Admit that you're between jobs and tell them your birth year.
+false
+3007
+Lie and say you’re a… school teacher.
+false

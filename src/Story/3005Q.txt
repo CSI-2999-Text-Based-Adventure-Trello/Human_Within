@@ -1,0 +1,3 @@
+2
+The android repeats its question, “What is your  occupation and year of creation?”
+sprite5

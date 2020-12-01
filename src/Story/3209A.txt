@@ -1,0 +1,9 @@
+3210
+A reverse cyborg? That actually sounds very interesting. Sign me up!
+false
+3210
+You imagine the Cartographer poking your brain with sharp tools. Ask about the dangers.
+false
+3211
+This seems too drastic and too sudden. Tell the Cartographer you’ll  find some other way to live.
+good
