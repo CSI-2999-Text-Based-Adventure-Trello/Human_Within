@@ -36,7 +36,6 @@ public class gameGUIController implements Initializable {
     @FXML
     private ImageView character;
     private int number;
-    private Stage event;
 
     switchBetweenScenes sBS = new switchBetweenScenes();
     Decision dec = new Decision();
@@ -140,6 +139,7 @@ public class gameGUIController implements Initializable {
 
     @FXML
     private void handleEndButton1(ActionEvent event) {
+        //Switch to endScreen2
         Stage thisStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         sBS.switchScence("/endScreen/endScreen2.fxml", thisStage);
     }
@@ -186,6 +186,7 @@ public class gameGUIController implements Initializable {
     }
 
     public void changeImage(String pic) {
+        //Changes the images
         Image image = new Image("/images/" + pic);
         character.setImage(image);
     }
