@@ -1,0 +1,9 @@
+0100
+inside the opened locker.
+false
+0102
+behind the door.
+true
+0101
+under the large table.
+true

@@ -1,0 +1,9 @@
+3035
+Call out quickly and quietly, “Argentum!”
+false
+3034
+Bang the metal part in your hand against a nearby table.
+false
+3036
+Do nothing and watch.
+false

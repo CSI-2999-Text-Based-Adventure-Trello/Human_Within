@@ -1,0 +1,9 @@
+3009
+Ask what they need help with.
+false
+3009
+Tell them you have your own problems to worry about.
+false
+3010
+Tell them you think you’d best be leaving.
+false
