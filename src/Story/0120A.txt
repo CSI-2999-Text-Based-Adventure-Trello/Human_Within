@@ -1,0 +1,6 @@
+0129
+Leave the chip.
+bad
+0130
+Grab the chip.
+false

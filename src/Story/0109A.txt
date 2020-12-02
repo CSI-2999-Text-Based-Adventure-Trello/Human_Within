@@ -1,0 +1,6 @@
+0117
+SLowly go to the window
+false
+0118
+Go through kitchen door
+bad

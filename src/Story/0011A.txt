@@ -1,6 +1,9 @@
 0012
 Do you search for food?
+false
 0013
 Do you search for a place to sleep?
+false
 0014
 Do you explore town?
+false

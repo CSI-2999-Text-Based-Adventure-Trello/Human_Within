@@ -1,6 +1,9 @@
 0106
-Ask someone for help- game over
+Ask someone for help
+bad
 0107
-Sneak into a hotel and hide 
+Find a place to hide
+false
 0108
-Turn yourself in to the police - game over
+Turn yourself in to the police
+bad

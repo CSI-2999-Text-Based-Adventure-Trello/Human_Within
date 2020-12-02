@@ -1,0 +1,6 @@
+0155
+Donate money to charities
+good
+0156
+Buy drones for securities
+false
