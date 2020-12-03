@@ -1,0 +1,6 @@
+0010
+Head towards the industrial complex, at least then you know you're heading somewhere
+false
+0011
+Take the scenic route, you've always been more of a journey person
+false

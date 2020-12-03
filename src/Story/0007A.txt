@@ -1,9 +1,9 @@
-1000
+0006
 Go to surface 
 false
-1999
-Go to data core 
-bad
-1999
+0008
+Go to data core
+false
+0009
 Look for another option
 bad

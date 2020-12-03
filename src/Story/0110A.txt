@@ -1,0 +1,6 @@
+0119
+You go back inside.
+false
+0120
+Somehow distract it,so you can knock the cyborg out with a bat.
+false

@@ -1,6 +1,9 @@
 0100
 Inside the opened locker
+false
 0101
-Behind the door- game over
+Behind the door
+bad
 0102
-Under the table- game over
+Under the table
+bad
