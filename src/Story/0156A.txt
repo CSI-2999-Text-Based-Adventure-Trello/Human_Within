@@ -1,0 +1,6 @@
+0155
+Donate money to charities
+good
+0154
+Hire workers who are in need.
+false

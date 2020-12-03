@@ -1,0 +1,6 @@
+0127
+Use the chip as a resource.
+good
+0128
+Destroy the chip.
+bad
