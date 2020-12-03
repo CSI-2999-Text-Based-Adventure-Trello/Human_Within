@@ -38,7 +38,7 @@ public class Decision {
 
     //Number of Descision and Question load from file
     public void decisionQuestion(String TextFileQ) {
-        CSI2999Project.talker = "sprite1.png";
+        //CSI2999Project.talker = "sprite1.png";
         try {
             BufferedReader reader = new BufferedReader(new FileReader(TextFileQ));
             String f;

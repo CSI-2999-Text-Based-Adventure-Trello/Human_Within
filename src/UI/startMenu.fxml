@@ -19,12 +19,12 @@
             </ImageView>
             <Button alignment="CENTER" contentDisplay="CENTER" layoutX="102.0" layoutY="490.0" mnemonicParsing="false" onAction="#startButtonAction" prefHeight="25.0" prefWidth="212.0" style="-fx-background-color: black; -fx-border-color: white;" text="Start" textAlignment="CENTER" textFill="WHITE">
                <font>
-                  <Font name="Lucida Sans Typewriter Regular" size="14.0" />
+                  <Font name="Lucida Sans Typewriter Regular" size="16.0" />
                </font>
             </Button>
             <Button fx:id="infoButton" alignment="CENTER" contentDisplay="CENTER" layoutX="102.0" layoutY="565.0" mnemonicParsing="false" onAction="#infoButtonAction" prefHeight="25.0" prefWidth="212.0" style="-fx-background-color: black; -fx-border-color: white;" text="How to Play" textAlignment="CENTER" textFill="WHITE">
                <font>
-                  <Font name="Lucida Sans Typewriter Regular" size="14.0" />
+                  <Font name="Lucida Sans Typewriter Regular" size="16.0" />
                </font>
             </Button>
          </children>

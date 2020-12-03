@@ -19,16 +19,16 @@
          <children>
             <Button fx:id="newGame" mnemonicParsing="false" onAction="#newGameButtonAction" prefHeight="55.0" prefWidth="155.0" style="-fx-background-color: black; -fx-border-color: white;" text="New Game" textFill="WHITE">
                <font>
-                  <Font name="Lucida Sans Typewriter Bold" size="12.0" />
+                  <Font name="Lucida Sans Typewriter Regular" size="16.0" />
                </font>
             </Button>
             <Button mnemonicParsing="false" onAction="#loadGameButtonAction" prefHeight="55.0" prefWidth="155.0" style="-fx-background-color: black; -fx-border-color: white;" text="Load Game" textFill="WHITE">
                <font>
-                  <Font name="Lucida Sans Typewriter Bold" size="12.0" />
+                  <Font name="Lucida Sans Typewriter Regular" size="16.0" />
                </font></Button>
             <Button mnemonicParsing="false" onAction="#cancelButtonAction" prefHeight="55.0" prefWidth="155.0" style="-fx-background-color: black; -fx-border-color: white;" text="Cancel" textFill="WHITE">
                <font>
-                  <Font name="Lucida Sans Typewriter Regular" size="12.0" />
+                  <Font name="Lucida Sans Typewriter Regular" size="16.0" />
                </font></Button>
          </children>
          <opaqueInsets>

@@ -24,7 +24,7 @@
    <children>
       <TextArea fx:id="txtOutput" editable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="300.0" prefWidth="600.0" style="-fx-control-inner-background: black; -fx-text-fill: white;" wrapText="true">
          <font>
-            <Font name="Lucida Sans Typewriter Regular" size="12.0" />
+            <Font name="Lucida Sans Typewriter Regular" size="16.0" />
          </font></TextArea>
       <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="100.0" spacing="10.0" GridPane.columnIndex="1">
          <children>
@@ -34,7 +34,7 @@
                </image></ImageView>
             <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="209.0" text=" Player Stats:" textAlignment="CENTER" textFill="WHITE">
                <font>
-                  <Font name="Lucida Sans Typewriter Regular" size="12.0" />
+                  <Font name="Lucida Sans Typewriter Regular" size="16.0" />
                </font></Label>
          </children>
          <opaqueInsets>
@@ -48,20 +48,20 @@
          <children>
             <Button fx:id="choiceA" alignment="TOP_LEFT" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#choiceA" prefHeight="50.0" prefWidth="20.0" style="-fx-border-color: #1857f5; -fx-background-color: black;" text="Choice A" textFill="WHITE" wrapText="true">
                <font>
-                  <Font name="Lucida Sans Typewriter Regular" size="12.0" />
+                  <Font name="Lucida Sans Typewriter Regular" size="14.0" />
                </font></Button>
                 
             <Button fx:id="choiceB" alignment="TOP_LEFT" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#choiceB" prefHeight="50.0" prefWidth="20.0" style="-fx-border-color: #1857f5; -fx-background-color: black;" text="Choice B" textFill="WHITE" wrapText="true">
                <font>
-                  <Font name="Lucida Sans Typewriter Regular" size="12.0" />
+                  <Font name="Lucida Sans Typewriter Regular" size="14.0" />
                </font></Button>
             <Button fx:id="choiceC" alignment="TOP_LEFT" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#choiceC" prefHeight="50.0" prefWidth="20.0" style="-fx-border-color: #1857f5; -fx-background-color: black;" text="Choice C" textFill="WHITE" wrapText="true">
                <font>
-                  <Font name="Lucida Sans Typewriter Bold" size="12.0" />
+                  <Font name="Lucida Sans Typewriter Regular" size="14.0" />
                </font></Button>
             <Button fx:id="choiceD" alignment="TOP_LEFT" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#choiceD" prefHeight="50.0" prefWidth="20.0" style="-fx-border-color: #1857f5; -fx-background-color: black;" text="Choice D" textFill="WHITE" wrapText="true">
                <font>
-                  <Font name="Lucida Sans Typewriter Regular" size="12.0" />
+                  <Font name="Lucida Sans Typewriter Regular" size="14.0" />
                </font></Button>
          </children>
          <padding>
@@ -70,7 +70,7 @@
       </VBox>
       <Button alignment="CENTER" mnemonicParsing="false" onAction="#contButtonAction" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: black; -fx-border-color: white;" text="Continue" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
          <font>
-            <Font name="Lucida Sans Typewriter Regular" size="12.0" />
+            <Font name="Lucida Sans Typewriter Regular" size="16.0" />
          </font>
       </Button>
    </children>
