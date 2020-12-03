@@ -1,4 +1,5 @@
 3
-Heading to the industrial complex, it becomes  more apparent just how broken down it is, and likely abandoned. So you continue without hesitation, and you reach inside and see there are many equipment machines that haven’t been used for ages, molding overtime. During your search you see that there were rooms full of memory chips on the table which seems odd because of the fact that even if there was someone living here there should be food and water here rather than memory chips. 
 As you were looking closely at the memory chips, you begin to hear footsteps down the hall and metallic voices speaking. It's not abandoned after all! You have to decide whether to hide...
+Heading to the industrial complex, it becomes  more apparent just how broken down it is, and likely abandoned. So you continue without hesitation, and you reach inside and see there are many equipment machines that haven’t been used for ages, molding overtime. During your search you see that there were rooms full of memory chips on the table which seems odd because of the fact that even if there was someone living here there should be food and water here rather than memory chips. 
+sprite1
 
